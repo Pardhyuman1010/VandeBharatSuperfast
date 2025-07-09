@@ -1,0 +1,712 @@
+[
+  {
+    "Train Number": "22435",
+    "Departure Station": "Varanasi",
+    "Arrival Station": "New Delhi"
+  },
+  {
+    "Train Number": "22439",
+    "Departure Station": "New Delhi",
+    "Arrival Station": "Shri Mata Vaishno Devi Katra"
+  },
+  {
+    "Train Number": "20901",
+    "Departure Station": "Mumbai Central",
+    "Arrival Station": "Gandhinagar Capital"
+  },
+  {
+    "Train Number": "22447",
+    "Departure Station": "New Delhi",
+    "Arrival Station": "Amb Andaura"
+  },
+  {
+    "Train Number": "20607",
+    "Departure Station": "MGR Chennai Central",
+    "Arrival Station": "Mysuru"
+  },
+  {
+    "Train Number": "20825",
+    "Departure Station": "Bilaspur",
+    "Arrival Station": "Nagpur"
+  },
+  {
+    "Train Number": "22301",
+    "Departure Station": "Howrah",
+    "Arrival Station": "New Jalpaiguri"
+  },
+  {
+    "Train Number": "20833",
+    "Departure Station": "Visakhapatnam",
+    "Arrival Station": "Secunderabad"
+  },
+  {
+    "Train Number": "22225",
+    "Departure Station": "Mumbai CSMT",
+    "Arrival Station": "Solapur"
+  },
+  {
+    "Train Number": "22223",
+    "Departure Station": "Mumbai CSMT",
+    "Arrival Station": "Sainagar Shirdi"
+  },
+  {
+    "Train Number": "20171",
+    "Departure Station": "Rani Kamalapati",
+    "Arrival Station": "Hazrat Nizamuddin"
+  },
+  {
+    "Train Number": "20701",
+    "Departure Station": "Secunderabad",
+    "Arrival Station": "Tirupati"
+  },
+  {
+    "Train Number": "20643",
+    "Departure Station": "MGR Chennai Central",
+    "Arrival Station": "Coimbatore"
+  },
+  {
+    "Train Number": "20977",
+    "Departure Station": "Ajmer",
+    "Arrival Station": "Chandigarh"
+  },
+  {
+    "Train Number": "20633",
+    "Departure Station": "Kasaragod",
+    "Arrival Station": "Thiruvananthapuram"
+  },
+  {
+    "Train Number": "22895",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Puri"
+  },
+  {
+    "Train Number": "22457",
+    "Departure Station": "Anand Vihar Terminal",
+    "Arrival Station": "Dehradun"
+  },
+  {
+    "Train Number": "22227",
+    "Departure Station": "New Jalpaiguri",
+    "Arrival Station": "Guwahati"
+  },
+  {
+    "Train Number": "22229",
+    "Departure Station": "Mumbai CSMT",
+    "Arrival Station": "Madgaon"
+  },
+  {
+    "Train Number": "22349",
+    "Departure Station": "Patna",
+    "Arrival Station": "Ranchi"
+  },
+  {
+    "Train Number": "20661",
+    "Departure Station": "KSR Bengaluru",
+    "Arrival Station": "Dharwad"
+  },
+  {
+    "Train Number": "20173",
+    "Departure Station": "Rani Kamalapati",
+    "Arrival Station": "Rewa"
+  },
+  {
+    "Train Number": "20911",
+    "Departure Station": "Indore",
+    "Arrival Station": "Nagpur"
+  },
+  {
+    "Train Number": "12461",
+    "Departure Station": "Jodhpur",
+    "Arrival Station": "Sabarmati"
+  },
+  {
+    "Train Number": "22549",
+    "Departure Station": "Gorakhpur",
+    "Arrival Station": "Prayagraj"
+  },
+  {
+    "Train Number": "20979",
+    "Departure Station": "Udaipur City",
+    "Arrival Station": "Jaipur"
+  },
+  {
+    "Train Number": "20677",
+    "Departure Station": "MGR Chennai Central",
+    "Arrival Station": "Vijayawada"
+  },
+  {
+    "Train Number": "20665",
+    "Departure Station": "Chennai Egmore",
+    "Arrival Station": "Tirunelveli"
+  },
+  {
+    "Train Number": "20703",
+    "Departure Station": "Kacheguda",
+    "Arrival Station": "Yesvantpur"
+  },
+  {
+    "Train Number": "22347",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "20897",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Ranchi"
+  },
+  {
+    "Train Number": "20835",
+    "Departure Station": "Rourkela",
+    "Arrival Station": "Puri"
+  },
+  {
+    "Train Number": "20631",
+    "Departure Station": "Mangaluru",
+    "Arrival Station": "Thiruvananthapuram"
+  },
+  {
+    "Train Number": "22925",
+    "Departure Station": "Ahmedabad",
+    "Arrival Station": "Okha"
+  },
+  {
+    "Train Number": "22415",
+    "Departure Station": "Varanasi",
+    "Arrival Station": "New Delhi"
+  },
+  {
+    "Train Number": "22425",
+    "Departure Station": "Ayodhya Cantonment",
+    "Arrival Station": "Anand Vihar Terminal"
+  },
+  {
+    "Train Number": "22477",
+    "Departure Station": "New Delhi",
+    "Arrival Station": "Shri Mata Vaishno Devi Katra"
+  },
+  {
+    "Train Number": "22487",
+    "Departure Station": "Delhi",
+    "Arrival Station": "Amritsar"
+  },
+  {
+    "Train Number": "20641",
+    "Departure Station": "Bengaluru Cantonment",
+    "Arrival Station": "Coimbatore"
+  },
+  {
+    "Train Number": "20645",
+    "Departure Station": "Madgaon",
+    "Arrival Station": "Mangaluru Central"
+  },
+  {
+    "Train Number": "20705",
+    "Departure Station": "Jalna",
+    "Arrival Station": "Mumbai CSMT"
+  },
+  {
+    "Train Number": "22231",
+    "Departure Station": "Kalaburagi (Gulbarga)",
+    "Arrival Station": "SMVT Bengaluru"
+  },
+  {
+    "Train Number": "22233",
+    "Departure Station": "New Jalpaiguri",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "22545",
+    "Departure Station": "Lucknow",
+    "Arrival Station": "Dehradun"
+  },
+  {
+    "Train Number": "22961",
+    "Departure Station": "Mumbai",
+    "Arrival Station": "Ahmedabad"
+  },
+  {
+    "Train Number": "20663",
+    "Departure Station": "Mysuru",
+    "Arrival Station": "MGR Chennai Central"
+  },
+  {
+    "Train Number": "22469",
+    "Departure Station": "Khajuraho",
+    "Arrival Station": "Hazrat Nizamuddin"
+  },
+  {
+    "Train Number": "20707",
+    "Departure Station": "Secunderabad",
+    "Arrival Station": "Visakhapatnam"
+  },
+  {
+    "Train Number": "20887",
+    "Departure Station": "Ranchi",
+    "Arrival Station": "Varanasi"
+  },
+  {
+    "Train Number": "20841",
+    "Departure Station": "Bhubaneswar",
+    "Arrival Station": "Visakhapatnam"
+  },
+  {
+    "Train Number": "22345",
+    "Departure Station": "Patna",
+    "Arrival Station": "Gomti Nagar (Lucknow)"
+  },
+  {
+    "Train Number": "20627",
+    "Departure Station": "Chennai Egmore",
+    "Arrival Station": "Nagercoil"
+  },
+  {
+    "Train Number": "20671",
+    "Departure Station": "Madurai",
+    "Arrival Station": "Bengaluru Cantt"
+  },
+  {
+    "Train Number": "22489",
+    "Departure Station": "Lucknow Charbagh",
+    "Arrival Station": "Meerut"
+  },
+  {
+    "Train Number": "20981",
+    "Departure Station": "Udaipur",
+    "Arrival Station": "Agra Cantt"
+  },
+  {
+    "Train Number": "20893",
+    "Departure Station": "Tatanagar",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "21895",
+    "Departure Station": "Tatanagar",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "21893",
+    "Departure Station": "Tatanagar",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "20891",
+    "Departure Station": "Tatanagar",
+    "Arrival Station": "Brahmapur"
+  },
+  {
+    "Train Number": "20871",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Rourkela"
+  },
+  {
+    "Train Number": "22303",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Gaya"
+  },
+  {
+    "Train Number": "22309",
+    "Departure Station": "Howrah",
+    "Arrival Station": "Bhagalpur"
+  },
+  {
+    "Train Number": "22499",
+    "Departure Station": "Deoghar",
+    "Arrival Station": "Varanasi"
+  },
+  {
+    "Train Number": "20669",
+    "Departure Station": "SSS Hubballi",
+    "Arrival Station": "Pune"
+  },
+  {
+    "Train Number": "20673",
+    "Departure Station": "SCSMT Kolhapur",
+    "Arrival Station": "Pune"
+  },
+  {
+    "Train Number": "20175",
+    "Departure Station": "Banaras",
+    "Arrival Station": "Agra Cantt"
+  },
+  {
+    "Train Number": "20101",
+    "Departure Station": "Nagpur",
+    "Arrival Station": "Secunderabad"
+  },
+  {
+    "Train Number": "20829",
+    "Departure Station": "Durg",
+    "Arrival Station": "Visakhapatnam"
+  },
+  {
+    "Train Number": "26901",
+    "Departure Station": "Sabarmati",
+    "Arrival Station": "Veraval"
+  },
+  {
+    "Train Number": "26401",
+    "Departure Station": "Shri Mata Vaishno Devi Katra",
+    "Arrival Station": "Srinagar"
+  },
+  {
+    "Train Number": "26403",
+    "Departure Station": "Shri Mata Vaishno Devi Katra",
+    "Arrival Station": "Srinagar"
+  },
+  {
+    "Train Number": "22436",
+    "Departure Station": "New Delhi",
+    "Arrival Station": "Varanasi"
+  },
+  {
+    "Train Number": "22440",
+    "Departure Station": "Shri Mata Vaishno Devi Katra",
+    "Arrival Station": "New Delhi"
+  },
+  {
+    "Train Number": "20902",
+    "Departure Station": "Gandhinagar Capital",
+    "Arrival Station": "Mumbai Central"
+  },
+  {
+    "Train Number": "22448",
+    "Departure Station": "Amb Andaura",
+    "Arrival Station": "New Delhi"
+  },
+  {
+    "Train Number": "20608",
+    "Departure Station": "Mysuru",
+    "Arrival Station": "MGR Chennai Central"
+  },
+  {
+    "Train Number": "20826",
+    "Departure Station": "Nagpur",
+    "Arrival Station": "Bilaspur"
+  },
+  {
+    "Train Number": "22302",
+    "Departure Station": "New Jalpaiguri",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "20834",
+    "Departure Station": "Secunderabad",
+    "Arrival Station": "Visakhapatnam"
+  },
+  {
+    "Train Number": "22226",
+    "Departure Station": "Solapur",
+    "Arrival Station": "Mumbai CSMT"
+  },
+  {
+    "Train Number": "22224",
+    "Departure Station": "Sainagar Shirdi",
+    "Arrival Station": "Mumbai CSMT"
+  },
+  {
+    "Train Number": "20172",
+    "Departure Station": "Hazrat Nizamuddin",
+    "Arrival Station": "Rani Kamalapati"
+  },
+  {
+    "Train Number": "20702",
+    "Departure Station": "Tirupati",
+    "Arrival Station": "Secunderabad"
+  },
+  {
+    "Train Number": "20644",
+    "Departure Station": "Coimbatore",
+    "Arrival Station": "MGR Chennai Central"
+  },
+  {
+    "Train Number": "20978",
+    "Departure Station": "Chandigarh",
+    "Arrival Station": "Ajmer"
+  },
+  {
+    "Train Number": "20634",
+    "Departure Station": "Thiruvananthapuram",
+    "Arrival Station": "Kasaragod"
+  },
+  {
+    "Train Number": "22896",
+    "Departure Station": "Puri",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "22458",
+    "Departure Station": "Dehradun",
+    "Arrival Station": "Anand Vihar Terminal"
+  },
+  {
+    "Train Number": "22228",
+    "Departure Station": "Guwahati",
+    "Arrival Station": "New Jalpaiguri"
+  },
+  {
+    "Train Number": "22230",
+    "Departure Station": "Madgaon",
+    "Arrival Station": "Mumbai CSMT"
+  },
+  {
+    "Train Number": "22350",
+    "Departure Station": "Ranchi",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "20662",
+    "Departure Station": "Dharwad",
+    "Arrival Station": "KSR Bengaluru"
+  },
+  {
+    "Train Number": "20174",
+    "Departure Station": "Rewa",
+    "Arrival Station": "Rani Kamalapati"
+  },
+  {
+    "Train Number": "20912",
+    "Departure Station": "Nagpur",
+    "Arrival Station": "Indore"
+  },
+  {
+    "Train Number": "12462",
+    "Departure Station": "Sabarmati",
+    "Arrival Station": "Jodhpur"
+  },
+  {
+    "Train Number": "22550",
+    "Departure Station": "Prayagraj",
+    "Arrival Station": "Gorakhpur"
+  },
+  {
+    "Train Number": "20980",
+    "Departure Station": "Jaipur",
+    "Arrival Station": "Udaipur City"
+  },
+  {
+    "Train Number": "20678",
+    "Departure Station": "Vijayawada",
+    "Arrival Station": "MGR Chennai Central"
+  },
+  {
+    "Train Number": "20666",
+    "Departure Station": "Tirunelveli",
+    "Arrival Station": "Chennai Egmore"
+  },
+  {
+    "Train Number": "20704",
+    "Departure Station": "Yesvantpur",
+    "Arrival Station": "Kacheguda"
+  },
+  {
+    "Train Number": "22348",
+    "Departure Station": "Patna",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "20898",
+    "Departure Station": "Ranchi",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "20836",
+    "Departure Station": "Puri",
+    "Arrival Station": "Rourkela"
+  },
+  {
+    "Train Number": "20632",
+    "Departure Station": "Thiruvananthapuram",
+    "Arrival Station": "Mangaluru"
+  },
+  {
+    "Train Number": "22926",
+    "Departure Station": "Okha",
+    "Arrival Station": "Ahmedabad"
+  },
+  {
+    "Train Number": "22416",
+    "Departure Station": "New Delhi",
+    "Arrival Station": "Varanasi"
+  },
+  {
+    "Train Number": "22426",
+    "Departure Station": "Anand Vihar Terminal",
+    "Arrival Station": "Ayodhya Cantonment"
+  },
+  {
+    "Train Number": "22478",
+    "Departure Station": "Shri Mata Vaishno Devi Katra",
+    "Arrival Station": "New Delhi"
+  },
+  {
+    "Train Number": "22488",
+    "Departure Station": "Amritsar",
+    "Arrival Station": "Delhi"
+  },
+  {
+    "Train Number": "20642",
+    "Departure Station": "Coimbatore",
+    "Arrival Station": "Bengaluru Cantonment"
+  },
+  {
+    "Train Number": "20646",
+    "Departure Station": "Mangaluru Central",
+    "Arrival Station": "Madgaon"
+  },
+  {
+    "Train Number": "20706",
+    "Departure Station": "Mumbai CSMT",
+    "Arrival Station": "Jalna"
+  },
+  {
+    "Train Number": "22232",
+    "Departure Station": "SMVT Bengaluru",
+    "Arrival Station": "Kalaburagi (Gulbarga)"
+  },
+  {
+    "Train Number": "22234",
+    "Departure Station": "Patna",
+    "Arrival Station": "New Jalpaiguri"
+  },
+  {
+    "Train Number": "22546",
+    "Departure Station": "Dehradun",
+    "Arrival Station": "Lucknow"
+  },
+  {
+    "Train Number": "22962",
+    "Departure Station": "Ahmedabad",
+    "Arrival Station": "Mumbai"
+  },
+  {
+    "Train Number": "20664",
+    "Departure Station": "MGR Chennai Central",
+    "Arrival Station": "Mysuru"
+  },
+  {
+    "Train Number": "22470",
+    "Departure Station": "Hazrat Nizamuddin",
+    "Arrival Station": "Khajuraho"
+  },
+  {
+    "Train Number": "20708",
+    "Departure Station": "Visakhapatnam",
+    "Arrival Station": "Secunderabad"
+  },
+  {
+    "Train Number": "20888",
+    "Departure Station": "Varanasi",
+    "Arrival Station": "Ranchi"
+  },
+  {
+    "Train Number": "20842",
+    "Departure Station": "Visakhapatnam",
+    "Arrival Station": "Bhubaneswar"
+  },
+  {
+    "Train Number": "22346",
+    "Departure Station": "Gomti Nagar (Lucknow)",
+    "Arrival Station": "Patna"
+  },
+  {
+    "Train Number": "20628",
+    "Departure Station": "Nagercoil",
+    "Arrival Station": "Chennai Egmore"
+  },
+  {
+    "Train Number": "20672",
+    "Departure Station": "Bengaluru Cantt",
+    "Arrival Station": "Madurai"
+  },
+  {
+    "Train Number": "22490",
+    "Departure Station": "Meerut",
+    "Arrival Station": "Lucknow Charbagh"
+  },
+  {
+    "Train Number": "20982",
+    "Departure Station": "Agra Cantt",
+    "Arrival Station": "Udaipur"
+  },
+  {
+    "Train Number": "20894",
+    "Departure Station": "Patna",
+    "Arrival Station": "Tatanagar"
+  },
+  {
+    "Train Number": "21896",
+    "Departure Station": "Patna",
+    "Arrival Station": "Tatanagar"
+  },
+  {
+    "Train Number": "21894",
+    "Departure Station": "Patna",
+    "Arrival Station": "Tatanagar"
+  },
+  {
+    "Train Number": "20892",
+    "Departure Station": "Brahmapur",
+    "Arrival Station": "Tatanagar"
+  },
+  {
+    "Train Number": "20872",
+    "Departure Station": "Rourkela",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "22304",
+    "Departure Station": "Gaya",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "22310",
+    "Departure Station": "Bhagalpur",
+    "Arrival Station": "Howrah"
+  },
+  {
+    "Train Number": "22500",
+    "Departure Station": "Varanasi",
+    "Arrival Station": "Deoghar"
+  },
+  {
+    "Train Number": "20670",
+    "Departure Station": "Pune",
+    "Arrival Station": "SSS Hubballi"
+  },
+  {
+    "Train Number": "20674",
+    "Departure Station": "Pune",
+    "Arrival Station": "SCSMT Kolhapur"
+  },
+  {
+    "Train Number": "20176",
+    "Departure Station": "Agra Cantt",
+    "Arrival Station": "Banaras"
+  },
+  {
+    "Train Number": "20102",
+    "Departure Station": "Secunderabad",
+    "Arrival Station": "Nagpur"
+  },
+  {
+    "Train Number": "20830",
+    "Departure Station": "Visakhapatnam",
+    "Arrival Station": "Durg"
+  },
+  {
+    "Train Number": "26902",
+    "Departure Station": "Veraval",
+    "Arrival Station": "Sabarmati"
+  },
+  {
+    "Train Number": "26402",
+    "Departure Station": "Srinagar",
+    "Arrival Station": "Shri Mata Vaishno Devi Katra"
+  },
+  {
+    "Train Number": "26404",
+    "Departure Station": "Srinagar",
+    "Arrival Station": "Shri Mata Vaishno Devi Katra"
+  }
+]

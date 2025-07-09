@@ -279,8 +279,57 @@ border: 2px solid #dc2626;
 
 </div>
 
+
 </nav>
 
+// search button for station started here
+
+<h2>Search Vande Bharat Trains</h2>
+
+  <input type="text" id="fromStation" placeholder="Departure Station" />
+  <input type="text" id="toStation" placeholder="Arrival Station" />
+  <button onclick="searchTrains()">Search</button>
+
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>Train Number</th>
+        <th>Departure Station</th>
+        <th>Arrival Station</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    let trainData = [];
+
+    // Load JSON file
+    fetch("vande_bharat_trains.json")
+      .then(response => response.json())
+      .then(data => trainData = data);
+
+    function searchTrains() {
+      const from = document.getElementById("fromStation").value.toLowerCase();
+      const to = document.getElementById("toStation").value.toLowerCase();
+      const results = trainData.filter(train =>
+        train["Departure Station"].toLowerCase().includes(from) &&
+        train["Arrival Station"].toLowerCase().includes(to)
+      );
+
+      const tbody = document.querySelector("#resultsTable tbody");
+      tbody.innerHTML = "";
+
+      results.forEach(train => {
+        const row = `<tr>
+          <td>${train["Train Number"]}</td>
+          <td>${train["Departure Station"]}</td>
+          <td>${train["Arrival Station"]}</td>
+        </tr>`;
+        tbody.innerHTML += row;
+      });
+    }
+  </script>
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
