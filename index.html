@@ -23,6 +23,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
 
 <style>
 
@@ -36,6 +37,8 @@ font-family: 'Poppins', sans-serif;
 background-color: #f5f8ff;
 
 }
+
+.swiper-slide img { width: 100%; height: 500px; object-fit: cover; position: relative; margin-top: 30px}
 
 .hero-section {
 
@@ -202,6 +205,8 @@ border: 2px solid #dc2626;
 
 <body>
 
+   
+
 <!-- Navigation -->
 
 <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
@@ -226,6 +231,7 @@ border: 2px solid #dc2626;
 
 </div>
 
+
 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
 
 <a href="#routes" class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium">Routes</a>
@@ -238,6 +244,7 @@ border: 2px solid #dc2626;
 
 </div>
 
+ 
 <div class="-mr-2 flex items-center md:hidden">
 
 <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
@@ -275,7 +282,24 @@ border: 2px solid #dc2626;
 </nav>
 
 
-
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="executive.jpg" alt="Executive Class" /></div> 
+      <div class="swiper-slide"><img src="chair.jpg" alt="Chair Car" /></div>     
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  </script>
 <!-- News Section -->
 
 <section class="py-12 bg-white">
@@ -927,7 +951,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1635561333878-3b0946b92fe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="VanDeBharat Exterior">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="exterior.jpg">
 
 <div class="p-4 bg-white">
 
@@ -939,7 +963,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Executive Class Interior">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="executive.jpg" alt="Executive Class Interior">
 
 <div class="p-4 bg-white">
 
@@ -951,7 +975,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1013&q=80" alt="Chair Car Interior">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="chair.jpg" alt="Chair Car Interior">
 
 <div class="p-4 bg-white">
 
@@ -963,7 +987,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1561130229-51d3bc548a77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Onboard Catering">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="food.jpeg" alt="Onboard Catering">
 
 <div class="p-4 bg-white">
 
@@ -975,7 +999,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1495474477027-f3f0f9211cdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Driver's Cabin">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="driver.jpg" alt="Driver's Cabin">
 
 <div class="p-4 bg-white">
 
@@ -987,7 +1011,7 @@ Take a visual tour of Vande Bharat Express interiors and exteriors
 
 <div class="train-card overflow-hidden rounded-lg shadow-md">
 
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="https://images.unsplash.com/photo-1535905557558-4c2df050666b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Station View">
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="station.jpg" alt="Station View">
 
 <div class="p-4 bg-white">
 
@@ -1077,7 +1101,7 @@ Have questions about Vande Bharat Express? Get in touch with us.
 
 </div>
 
-<div class="grid md:grid-cols-2 gap-8">
+<div class="grid md:grid-cols-2 gap-8 ">
 
 <div class="bg-gray-50 rounded-lg p-8">
 
@@ -1107,45 +1131,7 @@ Have questions about Vande Bharat Express? Get in touch with us.
 
 </div>
 
-<div class="bg-gray-50 rounded-lg p-8">
 
-<h3 class="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-
-<form>
-
-<div class="mb-4">
-
-<label for="Firstname" class="block text-sm font-medium text-gray-700">First Name</label>
-
-<input type="text" id="Firstname" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
-
-</div>
-
-<div class="mb-4">
-
-<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-
-<input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500">
-
-</div>
-
-<div class="mb-4">
-
-<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-
-<textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500"></textarea>
-
-</div>
-
-<button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-all duration-300">
-
-Send Message
-
-</button>
-
-</form>
-
-</div>
 
 </div>
 
@@ -1153,27 +1139,50 @@ Send Message
 
 </section>
 
-<div class="container">
-        <form action="" id="contactForm">
-            <div class="alert">Your message</div>
+<div class="bg-white shadow-md rounded-lg p-8">
+  <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
 
-            <div class="inputBox">
-                <input type="text" id="name" placeholder="Your name...." />
-            </div>
+  <form id="contactForm" class="space-y-6">
+    <div class="alert text-sm text-green-600">Your message</div>
 
-            <div class="inputBox">
-                <input type="email" id="emailid" placeholder="Your Email....." />
-            </div>
+    <div>
+      <input
+        type="text"
+        id="name"
+        placeholder="Your name..."
+        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      />
+    </div>
 
-            <div class="inputBox">
-                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
-            </div>
+    <div>
+      <input
+        type="email"
+        id="emailid"
+        placeholder="Your Email..."
+        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      />
+    </div>
 
-            <div class="inputBox">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
- </div>
+    <div>
+      <textarea
+        id="msgContent"
+        cols="30"
+        rows="6"
+        placeholder="Message"
+        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      ></textarea>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium py-3 px-6 rounded-md shadow-md transition-all duration-300"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
 
 
 <!-- Footer -->
