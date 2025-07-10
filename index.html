@@ -303,7 +303,6 @@ border: 2px solid #dc2626;
       <div class="flex flex-col gap-4 mb-8">
         <input type="text" id="fromStation" placeholder="Departure Station" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
         <input type="text" id="toStation" placeholder="Arrival Station" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
-        <input type="date" id="travelDate" class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
         <button onclick="searchTrains()" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium rounded-lg shadow-md transition-all duration-300">
           <i class="fas fa-search mr-2"></i>Search Trains
         </button>
@@ -327,32 +326,32 @@ border: 2px solid #dc2626;
   <script>
     let trainData = [];
 
-    // Load JSON file
-    fetch("vande_bharat_trains.json")
-      .then(response => response.json())
-      .then(data => trainData = data);
+  // Load JSON file
+  fetch("vande_bharat_trains.json")
+    .then(response => response.json())
+    .then(data => trainData = data);
 
-    function searchTrains() {
-      const from = document.getElementById("fromStation").value.toLowerCase();
-      const to = document.getElementById("toStation").value.toLowerCase();
-      const date = document.getElementById("travelDate").value;
-      const results = trainData.filter(train =>
-        train["Departure Station"].toLowerCase().includes(from) &&
-        train["Arrival Station"].toLowerCase().includes(to)
-      );
+  function searchTrains() {
+    const from = document.getElementById("fromStation").value.toLowerCase();
+    const to = document.getElementById("toStation").value.toLowerCase();
 
-      const tbody = document.querySelector("#resultsTable tbody");
-      tbody.innerHTML = "";
+    const results = trainData.filter(train =>
+      train["Departure Station"].toLowerCase().includes(from) &&
+      train["Arrival Station"].toLowerCase().includes(to)
+    );
 
-      results.forEach(train => {
-        const row = `<tr>
-          <td>${train["Train Number"]}</td>
-          <td>${train["Departure Station"]}</td>
-          <td>${train["Arrival Station"]}</td>
-        </tr>`;
-        tbody.innerHTML += row;
-      });
-    }
+    const tbody = document.querySelector("#resultsTable tbody");
+    tbody.innerHTML = "";
+
+    results.forEach(train => {
+      const row = `<tr>
+        <td>${train["Train Number"]}</td>
+        <td>${train["Departure Station"]}</td>
+        <td>${train["Arrival Station"]}</td>
+      </tr>`;
+      tbody.innerHTML += row;
+    });
+  }
   </script>
 
     
