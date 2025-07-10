@@ -37,8 +37,15 @@ font-family: 'Poppins', sans-serif;
 background-color: #f5f8ff;
 
 }
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  background-color: #f0f0f0; /* optional: gray background */
+}
 
-.swiper-slide img { width: 100%; height: 500px; object-fit: cover; position: relative; margin-top: 30px}
+.swiper-slide img { width: 100%; height: 320px; object-fit: cover}
 
 .hero-section {
 
@@ -282,24 +289,40 @@ border: 2px solid #dc2626;
 
 </nav>
 
-// search button for station started here
+<!-- Search Section -->
+<section class="max-w-7xl mx-auto px-4 py-8">
+  <div class="flex flex-col md:flex-row gap-6 items-start">
+    
+    <!-- Left: Search -->
+    <div class="w-full md:w-1/2">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Search Vande Bharat Trains</h2>
+        <p class="mt-2 text-lg text-gray-600">Find trains between stations</p>
+      </div>
 
-<h2>Search Vande Bharat Trains</h2>
+      <div class="flex flex-col gap-4 mb-8">
+        <input type="text" id="fromStation" placeholder="Departure Station" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
+        <input type="text" id="toStation" placeholder="Arrival Station" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
+        <input type="date" id="travelDate" class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 shadow-sm"/>
+        <button onclick="searchTrains()" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium rounded-lg shadow-md transition-all duration-300">
+          <i class="fas fa-search mr-2"></i>Search Trains
+        </button>
+      </div>
 
-  <input type="text" id="fromStation" placeholder="Departure Station" />
-  <input type="text" id="toStation" placeholder="Arrival Station" />
-  <button onclick="searchTrains()">Search</button>
+      <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+        <table id="resultsTable" class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Train Number</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departure Station</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Arrival Station</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200"></tbody>
+        </table>
+      </div>
+    </div>
 
-  <table id="resultsTable">
-    <thead>
-      <tr>
-        <th>Train Number</th>
-        <th>Departure Station</th>
-        <th>Arrival Station</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
 
   <script>
     let trainData = [];
@@ -312,6 +335,7 @@ border: 2px solid #dc2626;
     function searchTrains() {
       const from = document.getElementById("fromStation").value.toLowerCase();
       const to = document.getElementById("toStation").value.toLowerCase();
+      const date = document.getElementById("travelDate").value;
       const results = trainData.filter(train =>
         train["Departure Station"].toLowerCase().includes(from) &&
         train["Arrival Station"].toLowerCase().includes(to)
@@ -331,20 +355,33 @@ border: 2px solid #dc2626;
     }
   </script>
 
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="news_12.png" alt="Executive Class" /></div> 
-      <div class="swiper-slide"><img src="chair.jpg" alt="Chair Car" /></div>     
+    
+
+    <!-- Right: Image Slider -->
+
+     <div class="w-full md:w-1/2">
+      <div class="swiper mySwiper">
+        <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Upcoming Vande Bharat Trains</h2>
+        <p class="mt-2 text-lg text-gray-600">Find latest Update Here</p>
+      </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="news_12.jpg" alt="Executive Class" /></div> 
+          <div class="swiper-slide"><img src="news_11.png" alt="Chair Car" /></div>     
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+
   </div>
+</section>
   <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
-      autoplay: { delay: 3000 },
+      autoplay: { delay: 5000 },
       pagination: { el: ".swiper-pagination", clickable: true },
       navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
     });

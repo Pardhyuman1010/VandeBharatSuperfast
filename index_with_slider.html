@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vande Bharat Express</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; background-color: #f5f8ff; }
+    .swiper-slide img { width: 100%; height: 450px; object-fit: cover; }
+  </style>
+</head>
+<body>
+  <!-- Top Image Slider -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="executive.jpg" alt="Executive Class"></div>
+      <div class="swiper-slide"><img src="chair.jpg" alt="Chair Car"></div>
+      <div class="swiper-slide"><img src="food.jpeg" alt="Catering"></div>
+      <div class="swiper-slide"><img src="driver.jpg" alt="Driver's Cabin"></div>
+      <div class="swiper-slide"><img src="station.jpg" alt="Station View"></div>
+    </div>
+    <!-- Navigation Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Your existing content can be inserted below here -->
+
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  </script>
+</body>
+</html>
