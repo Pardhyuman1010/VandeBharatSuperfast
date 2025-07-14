@@ -321,48 +321,68 @@ border: 2px solid #dc2626;
       <div class="overflow-x-auto bg-white rounded-lg shadow-md">
         <table id="resultsTable" class="min-w-full divide-y divide-gray-200">
           <thead class="bg-gray-50">
-            <tr>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Train Number</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departure Station</th>
-              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Arrival Station</th>
-            </tr>
-          </thead>
+           <tr>
+           <th class="px-4 py-2">Train No</th>
+           <th class="px-4 py-2">Name</th>
+           <th class="px-4 py-2">From</th>
+           <th class="px-4 py-2">To</th>
+           <th class="px-4 py-2">Timing</th>
+           <th class="px-4 py-2">Duration</th>
+           <th class="px-4 py-2">Distance</th>
+           <th class="px-4 py-2">Days</th>
+           </tr>
+        </thead>
           <tbody class="bg-white divide-y divide-gray-200"></tbody>
         </table>
       </div>
     </div>
 
+<!-- Navigation -->
 
-  <script>
-    let trainData = [];
 
-  // Load JSON file
-  fetch("vande_bharat_trains.json")
-    .then(response => response.json())
-    .then(data => trainData = data);
+<script>
+let trainData = [];
 
-  function searchTrains() {
-    const from = document.getElementById("fromStation").value.toLowerCase();
-    const to = document.getElementById("toStation").value.toLowerCase();
+// Load the JSON data
+fetch("trains.json")
+  .then(response => response.json())
+  .then(data => trainData = data);
 
-    const results = trainData.filter(train =>
-      train["Departure Station"].toLowerCase().includes(from) &&
-      train["Arrival Station"].toLowerCase().includes(to)
+function searchTrains() {
+  const input1 = document.getElementById("fromStation").value.toLowerCase();
+  const input2 = document.getElementById("toStation").value.toLowerCase();
+
+  const results = trainData.filter(train => {
+    return (
+      Object.values(train).some(value =>
+        String(value).toLowerCase().includes(input1)
+      ) &&
+      Object.values(train).some(value =>
+        String(value).toLowerCase().includes(input2)
+      )
     );
+  });
 
-    const tbody = document.querySelector("#resultsTable tbody");
-    tbody.innerHTML = "";
+  const tbody = document.querySelector("#resultsTable tbody");
+  tbody.innerHTML = "";
 
-    results.forEach(train => {
-      const row = `<tr>
+  results.forEach(train => {
+    const row = `
+      <tr>
         <td>${train["Train Number"]}</td>
-        <td>${train["Departure Station"]}</td>
-        <td>${train["Arrival Station"]}</td>
-      </tr>`;
-      tbody.innerHTML += row;
-    });
-  }
-  </script>
+        <td>${train["Train Name"]}</td>
+        <td>${train["Departure Station"]} (${train["Departure Station Code"]})</td>
+        <td>${train["Arrival Station"]} (${train["Arrival Station Code"]})</td>
+        <td>${train["Departure Time"]} → ${train["Arrival Time"]}</td>
+        <td>${train["Journey Duration"]}</td>
+        <td>${train["Journey Distance"]}</td>
+        <td>${train["Weekly Schedule"]}</td>
+      </tr>
+    `;
+    tbody.innerHTML += row;
+  });
+}
+</script>
 
     <!-- Right: Image Slider -->
 
