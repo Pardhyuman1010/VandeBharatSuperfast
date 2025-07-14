@@ -47,6 +47,16 @@ background-color: #f5f8ff;
 
 .swiper-slide img { width: 100%; height: 320px; object-fit: cover}
 
+.swiper-button-next,
+.swiper-button-prev {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50%;
+  color: black;
+}
+
+
 .hero-section {
 
 background: linear-gradient(111.1deg, rgba(8, 42, 107, 0.9) 0%, rgba(249, 115, 22, 0.8) 100%), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
@@ -354,19 +364,27 @@ border: 2px solid #dc2626;
   }
   </script>
 
-    
-
     <!-- Right: Image Slider -->
 
      <div class="w-full md:w-1/2">
       <div class="swiper mySwiper">
         <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">Upcoming Vande Bharat Trains</h2>
+        <h2 class="text-3xl font-bold text-gray-900">
+         <a href="news.html" class="hover:text-orange-500 transition">Upcoming Vande Bharat Trains</a>
+        </h2>
         <p class="mt-2 text-lg text-gray-600">Find latest Update Here</p>
       </div>
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="news_12.jpg" alt="Executive Class" /></div> 
-          <div class="swiper-slide"><img src="news_11.png" alt="Chair Car" /></div>     
+          <div class="swiper-slide">
+          <a href="news.html#jammu-post">
+           <img src="news_12.jpg" alt="New Delhi-Jammu Route" />
+          </a>
+        </div> 
+        <div class="swiper-slide">
+         <a href="news.html#award-post">
+          <img src="news_11.png" alt="Innovation Award" />
+         </a>
+        </div>     
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -591,6 +609,8 @@ Currently operational Vande Bharat Express routes across India
 
 </div>
 
+
+
 <!-- Route Timeline -->
 
 <div class="space-y-8" id="routes-container">
@@ -601,9 +621,9 @@ Currently operational Vande Bharat Express routes across India
 
 <div class="flex items-center justify-between">
 
-<h3 class="text-xl font-bold text-gray-900">New Delhi - Shri Mata Vaishno Devi Katra</h3>
+<h3 class="text-xl font-bold text-gray-900">Patna jn - New Delhi</h3>
 
-<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Train No. 22439/22440</span>
+<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Train No. 02251</span>
 
 </div>
 
@@ -619,7 +639,7 @@ Currently operational Vande Bharat Express routes across India
 
 </div>
 
-<p class="mt-1 text-sm font-medium">New Delhi</p>
+<p class="mt-1 text-sm font-medium">Patna</p>
 
 </div>
 
@@ -633,7 +653,7 @@ Currently operational Vande Bharat Express routes across India
 
 </div>
 
-<p class="mt-1 text-sm font-medium">Katra</p>
+<p class="mt-1 text-sm font-medium">New Delhi</p>
 
 </div>
 
@@ -647,7 +667,7 @@ Currently operational Vande Bharat Express routes across India
 
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
 
-<p class="text-lg font-semibold">655 km</p>
+<p class="text-lg font-semibold">1000 km</p>
 
 </div>
 
@@ -655,7 +675,7 @@ Currently operational Vande Bharat Express routes across India
 
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
 
-<p class="text-lg font-semibold">8 hours</p>
+<p class="text-lg font-semibold">11 hours 30 min</p>
 
 </div>
 
@@ -663,7 +683,7 @@ Currently operational Vande Bharat Express routes across India
 
 <h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
 
-<p class="text-lg font-semibold">Daily</p>
+<p class="text-lg font-semibold">SMTWT</p>
 
 </div>
 
@@ -679,9 +699,9 @@ Currently operational Vande Bharat Express routes across India
 
 <div class="flex items-center justify-between">
 
-<h3 class="text-xl font-bold text-gray-900">Mumbai CSMT - Solapur</h3>
+<h3 class="text-xl font-bold text-gray-900">New Delhi - Patna</h3>
 
-<span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 22225/22226</span>
+<span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 02252</span>
 
 </div>
 
@@ -697,7 +717,7 @@ Currently operational Vande Bharat Express routes across India
 
 </div>
 
-<p class="mt-1 text-sm font-medium">Mumbai CSMT</p>
+<p class="mt-1 text-sm font-medium">New Delhi</p>
 
 </div>
 
@@ -711,7 +731,7 @@ Currently operational Vande Bharat Express routes across India
 
 </div>
 
-<p class="mt-1 text-sm font-medium">Solapur</p>
+<p class="mt-1 text-sm font-medium">Patna</p>
 
 </div>
 
@@ -725,7 +745,7 @@ Currently operational Vande Bharat Express routes across India
 
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
 
-<p class="text-lg font-semibold">455 km</p>
+<p class="text-lg font-semibold">1000 km</p>
 
 </div>
 
@@ -733,7 +753,7 @@ Currently operational Vande Bharat Express routes across India
 
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
 
-<p class="text-lg font-semibold">6 hours 35 min</p>
+<p class="text-lg font-semibold">11 hours 35 min</p>
 
 </div>
 
