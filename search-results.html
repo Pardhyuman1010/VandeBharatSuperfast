@@ -80,26 +80,28 @@
       });
 
     function searchTrains() {
-      const from = document.getElementById("fromStation").value.trim();
-      const to = document.getElementById("toStation").value.trim();
-      if (!from || !to) {
-        alert("Please enter both Departure and Arrival stations.");
-        return;
-      }
+  const from = document.getElementById("fromStation").value.trim();
+  const to = document.getElementById("toStation").value.trim();
 
-      localStorage.setItem("fromStation", from);
-      localStorage.setItem("toStation", to);
-      showResults(from, to);
-    }
+  if (!from && !to) {
+    alert("Please enter at least one station.");
+    return;
+  }
+
+  localStorage.setItem("fromStation", from);
+  localStorage.setItem("toStation", to);
+  showResults(from, to);
+}
 
     function showResults(from, to) {
       const tbody = document.querySelector("#resultsTable tbody");
       tbody.innerHTML = "";
 
-      const filtered = trainData.filter(train =>
-        train["Departure Station"].toLowerCase().includes(from.toLowerCase()) &&
-        train["Arrival Station"].toLowerCase().includes(to.toLowerCase())
-      );
+      const filtered = trainData.filter(train => {
+    const fromMatch = from ? train["Departure Station"].toLowerCase().includes(from.toLowerCase()) : true;
+  const toMatch = to ? train["Arrival Station"].toLowerCase().includes(to.toLowerCase()) : true;
+  return fromMatch && toMatch;
+});
 
       if (filtered.length === 0) {
         tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-red-500">No trains found for this route.</td></tr>`;

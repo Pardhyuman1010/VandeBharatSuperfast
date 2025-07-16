@@ -1660,12 +1660,12 @@ function goToSearchResults() {
   const from = document.getElementById("fromStation").value.trim();
   const to = document.getElementById("toStation").value.trim();
 
-  if (from && to) {
+  if (from || to) {
     localStorage.setItem("fromStation", from);
     localStorage.setItem("toStation", to);
     window.location.href = "search-results.html";
   } else {
-    alert("Please enter both Departure and Arrival stations.");
+    alert("Please enter at least one station.");
   }
 }
 </script>
