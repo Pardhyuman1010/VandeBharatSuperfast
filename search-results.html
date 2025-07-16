@@ -12,7 +12,7 @@
     <div class="flex justify-center gap-4">
       <input id="fromStation" placeholder="Departure Station" class="px-4 py-2 rounded" />
       <input id="toStation" placeholder="Arrival Station" class="px-4 py-2 rounded" />
-      <button onclick="searchTrains()" class="bg-blue-700 text-white px-6 py-2 rounded">Search Again</button>
+      <button onclick="searchTrains()" class="bg-blue-700 text-white px-6 py-2 rounded">Search</button>
     </div>
   </section>
 
@@ -25,6 +25,8 @@
           <th class="px-4 py-2">From</th>
           <th class="px-4 py-2">To</th>
           <th class="px-4 py-2">Departure Time</th>
+          <th class="px-4 py-2">Arrival Time</th>
+          <th class="px-4 py-2">Journey Duration</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -73,6 +75,8 @@
             <td class="px-4 py-2">${train["Departure Station"]}</td>
             <td class="px-4 py-2">${train["Arrival Station"]}</td>
             <td class="px-4 py-2">${train["Departure Time"]}</td>
+            <td class="px-4 py-2">${train["Arrival Time"]}</td>
+            <td class="px-4 py-2">${train["Journey Duration"]}</td>
           </tr>`;
       });
     }
