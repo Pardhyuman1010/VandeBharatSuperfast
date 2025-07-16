@@ -1656,19 +1656,19 @@ observer.observe(card);
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 <script src="./mail.js"></script>
 <script>
-function goToSearchResults() {
-  const from = document.getElementById("fromStation").value.trim();
-  const to = document.getElementById("toStation").value.trim();
+    function goToSearchResults() {
+      const from = document.getElementById("fromStation").value.trim();
+      const to = document.getElementById("toStation").value.trim();
 
-  if (from || to) {
-    localStorage.setItem("fromStation", from);
-    localStorage.setItem("toStation", to);
-    window.location.href = "search-results.html";
-  } else {
-    alert("Please enter at least one station.");
-  }
-}
-</script>
+      if (from || to) {
+        localStorage.setItem("fromStation", from);
+        localStorage.setItem("toStation", to);
+        window.location.href = "search-results.html";
+      } else {
+        alert("Please enter at least one station.");
+      }
+    }
+  </script>
 
 </body>
 
