@@ -18,57 +18,62 @@
 
   <section class="w-full px-4 py-10">
     <table class="w-full bg-white text-sm" id="resultsTable">
-      <thead class="bg-gray-50">
-  <tr>
-    <th class="px-4 py-2">Train No</th>
-    <th class="px-4 py-2">Name</th>
-    <th class="px-4 py-2">From (Code)</th>
-    <th class="px-4 py-2">To (Code)</th>
-    <th class="px-4 py-2">Dep Time</th>
-    <th class="px-4 py-2">Arr Time</th>
-    <th class="px-4 py-2">Duration</th>
-    <th class="px-4 py-2">Distance</th>
-    <th class="px-4 py-2">Days</th>
-  </tr>
-</thead>
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="px-4 py-2">Train No</th>
+          <th class="px-4 py-2">Name</th>
+          <th class="px-4 py-2">From</th>
+          <th class="px-4 py-2">To</th>
+        </tr>
+      </thead>
       <tbody></tbody>
     </table>
   </section>
 
   <script>
-  function showResults(from, to) {
-    const tbody = document.querySelector("#resultsTable tbody");
-    tbody.innerHTML = "";
+    let trainData = [];
 
-    const filtered = trainData.filter(train => {
-      const fromMatch = from ? train["Departure Station"].toLowerCase().includes(from.toLowerCase()) : true;
-      const toMatch = to ? train["Arrival Station"].toLowerCase().includes(to.toLowerCase()) : true;
-      return fromMatch && toMatch;
-    });
+    fetch("trains.json")
+      .then(res => res.json())
+      .then(data => {
+        trainData = data;
 
-    if (filtered.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="9" class="text-center py-4 text-red-500">No trains found for this route.</td></tr>`;
-      return;
+        const from = localStorage.getItem("fromStation") || "";
+        const to = localStorage.getItem("toStation") || "";
+        document.getElementById("fromStation").value = from;
+        document.getElementById("toStation").value = to;
+
+        searchTrains();
+      });
+
+    function searchTrains() {
+      const from = document.getElementById("fromStation").value.trim().toLowerCase();
+      const to = document.getElementById("toStation").value.trim().toLowerCase();
+
+      const tbody = document.querySelector("#resultsTable tbody");
+      tbody.innerHTML = "";
+
+      const filtered = trainData.filter(train => {
+        const matchFrom = from ? train["Departure Station"].toLowerCase().includes(from) : true;
+        const matchTo = to ? train["Arrival Station"].toLowerCase().includes(to) : true;
+        return matchFrom && matchTo;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center text-red-600 py-4">No matching trains found.</td></tr>`;
+        return;
+      }
+
+      filtered.forEach(train => {
+        tbody.innerHTML += `
+          <tr class="text-center border-b">
+            <td class="px-4 py-2">${train["Train Number"]}</td>
+            <td class="px-4 py-2">${train["Train Name"]}</td>
+            <td class="px-4 py-2">${train["Departure Station"]}</td>
+            <td class="px-4 py-2">${train["Arrival Station"]}</td>
+          </tr>`;
+      });
     }
-
-    filtered.forEach(train => {
-      const row = `
-        <tr class="text-center border-b">
-          <td class="px-4 py-2">${train["Train Number"]}</td>
-          <td class="px-4 py-2">${train["Train Name"]}</td>
-          <td class="px-4 py-2">${train["Departure Station"]} (${train["Departure Station Code"]})</td>
-          <td class="px-4 py-2">${train["Arrival Station"]} (${train["Arrival Station Code"]})</td>
-          <td class="px-4 py-2">${train["Departure Time"]}</td>
-          <td class="px-4 py-2">${train["Arrival Time"]}</td>
-          <td class="px-4 py-2">${train["Journey Duration"]}</td>
-          <td class="px-4 py-2">${train["Journey Distance"]}</td>
-          <td class="px-4 py-2">${train["Weekly Schedule"]}</td>
-        </tr>
-      `;
-      tbody.innerHTML += row;
-    });
-  }
-</script>
-
+  </script>
 </body>
 </html>
