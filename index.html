@@ -340,67 +340,7 @@ border: 2px solid #dc2626;
     </button>
   </div>
   <!-- Search Results Table -->
-  <div class="overflow-x-auto bg-white rounded-lg shadow-md mb-8">
-    <table id="resultsTable" class="min-w-full divide-y divide-gray-200 text-sm">
-      <thead class="bg-gray-50">
-        <tr>
-          <th class="px-4 py-2">Train No</th>
-          <th class="px-4 py-2">Name</th>
-          <th class="px-4 py-2">From</th>
-          <th class="px-4 py-2">To</th>
-          <th class="px-4 py-2">Timing</th>
-          <th class="px-4 py-2">Duration</th>
-          <th class="px-4 py-2">Distance</th>
-          <th class="px-4 py-2">Days</th>
-        </tr>
-      </thead>
-      <tbody class="bg-white divide-y divide-gray-200"></tbody>
-    </table>
-  </div>  
-  <script>
-let trainData = [];
-
-fetch("trains.json")
-  .then(response => response.json())
-  .then(data => {
-    trainData = data;
-
-    // Extract unique station names
-    const stations = new Set();
-
-    trainData.forEach(train => {
-      stations.add(train["Departure Station"]);
-      stations.add(train["Arrival Station"]);
-    });
-
-    // Populate datalist
-    const datalist = document.getElementById("stationList");
-    stations.forEach(station => {
-      const option = document.createElement("option");
-      option.value = station;
-      datalist.appendChild(option);
-    });
-  });
-
-  const tbody = document.querySelector("#resultsTable tbody");
-  tbody.innerHTML = "";
-
-  results.forEach(train => {
-    const row = `
-      <tr>
-        <td>${train["Train Number"]}</td>
-        <td>${train["Train Name"]}</td>
-        <td>${train["Departure Station"]} (${train["Departure Station Code"]})</td>
-        <td>${train["Arrival Station"]} (${train["Arrival Station Code"]})</td>
-        <td>${train["Departure Time"]} → ${train["Arrival Time"]}</td>
-        <td>${train["Journey Duration"]}</td>
-        <td>${train["Journey Distance"]}</td>
-        <td>${train["Weekly Schedule"]}</td>
-      </tr>
-    `;
-    tbody.innerHTML += row;
-  });
-</script>
+  
 </section>
 
 
@@ -1715,6 +1655,20 @@ observer.observe(card);
 </script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 <script src="./mail.js"></script>
+<script>
+function goToSearchResults() {
+  const from = document.getElementById("fromStation").value.trim();
+  const to = document.getElementById("toStation").value.trim();
+
+  if (from && to) {
+    localStorage.setItem("fromStation", from);
+    localStorage.setItem("toStation", to);
+    window.location.href = "search-results.html";
+  } else {
+    alert("Please enter both Departure and Arrival stations.");
+  }
+}
+</script>
 
 </body>
 
