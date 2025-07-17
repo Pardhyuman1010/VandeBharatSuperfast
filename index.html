@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <style>
   #resultsTable {
     font-size: 14px;
@@ -28,10 +25,8 @@
     background-color: #f3f4f6;
   }
 </style>
-
-
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MNS37FKQ3B"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MNS37FKQ3B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -39,14 +34,10 @@
 
   gtag('config', 'G-MNS37FKQ3B');
 </script>
-
 <title></title>
-
 <script src="https://cdn.tailwindcss.com"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -67,7 +58,7 @@ background-color: #f5f8ff;
   background-color: #f0f0f0; /* optional: gray background */
 }
 
-.swiper-slide img { width: 100%; height: 320px; object-fit: cover}
+.swiper-slide img { width: 100%; height: 300px; object-fit: cover}
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -239,1181 +230,646 @@ border: 2px solid #dc2626;
 }
 
 </style>
-
-</head>
-
+</link></head>
 <body>
-
-   
-
 <!-- Navigation -->
-
 <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
-
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-9">
-
 <div class="flex justify-between h-16">
-
 <div class="flex">
-
 <div class="flex-shrink-0 flex items-center">
-
 <div class="flex items-center">
-
 <i class="fas fa-train text-orange-500 text-4xl mr-2"></i>
-
 <span class="text-xl font-bold">Vande Bharat</span>
-
-
 </div>
-
 </div>
-
 </div>
-
-
 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-
-<a href="#routes" class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium">Routes</a>
-
-<a href="#features" class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium">Features</a>
-
-<a href="#gallery" class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium">Gallery</a>
-
-<a href="#contact" class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium">Contact</a>
-
+<a class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium" href="#routes">Routes</a>
+<a class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium" href="#features">Features</a>
+<a class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium" href="#gallery">Gallery</a>
+<a class="text-white hover:text-orange-300 px-3 py-2 text-sm font-medium" href="#contact">Contact</a>
 </div>
-
- 
 <div class="-mr-2 flex items-center md:hidden">
-
-<button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
-
+<button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500" id="mobile-menu-button" type="button">
 <span class="sr-only">Open main menu</span>
-
 <i class="fas fa-bars"></i>
-
 </button>
-
 </div>
-
 </div>
-
 </div>
-
 <!-- Mobile menu -->
-
 <div class="hidden md:hidden" id="mobile-menu">
-
 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
-<a href="#routes" class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium">Routes</a>
-
-<a href="#features" class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium">Features</a>
-
-<a href="#gallery" class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium">Gallery</a>
-
-<a href="#contact" class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium">Contact</a>
-
+<a class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium" href="#routes">Routes</a>
+<a class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium" href="#features">Features</a>
+<a class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium" href="#gallery">Gallery</a>
+<a class="text-gray-900 hover:text-red-600 block px-3 py-2 text-base font-medium" href="#contact">Contact</a>
 </div>
-
 </div>
-
-
 </nav>
-
-
 <!-- Search Section -->
-<section class="w-full px-0 pt-4 pb-20 bg-orange-600 text-center">
-  <!-- Summary Cards -->
-<div class="max-w-7xl mx-auto px-4 mb-10">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-blue-800 text-center">
-    
-    <div class="bg-white rounded-xl p-4 shadow-lg">
-      <h3 class="text-xl font-bold">Total Trains</h3>
-      <p class="text-2xl mt-2 font-semibold">136</p>
-    </div>
-
-    <div class="bg-white rounded-xl p-4 shadow-lg">
-      <h3 class="text-xl font-bold">Stations Covered</h3>
-      <p class="text-2xl mt-2 font-semibold">857</p>
-    </div>
-
-    <div class="bg-white rounded-xl p-4 shadow-lg">
-      <h3 class="text-xl font-bold">States Covered</h3>
-      <p class="text-2xl mt-2 font-semibold">29</p>
-    </div>
-
-    <div class="bg-white rounded-xl p-4 shadow-lg">
-      <h3 class="text-xl font-bold">Distance (km)</h3>
-      <p class="text-2xl mt-2 font-semibold">50,000+</p>
-    </div>
-
-    <div class="bg-white rounded-xl p-4 shadow-lg">
-      <h3 class="text-xl font-bold">Daily Passengers</h3>
-      <p class="text-2xl mt-2 font-semibold">90,000+</p>
-    </div>
-
-  </div>
+<section class="w-full px-0 pt-0 pb-4 bg-orange-600 text-center">
+<!-- Summary Cards -->
+<div class="max-w-7xl mx-auto px-4 mb-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-blue-800 text-center">
+<div class="bg-white rounded-xl p-4 shadow-lg mt-2">
+<h3 class="text-xl font-bold">Total Trains</h3>
+<p class="text-2xl mt-2 font-semibold">136</p>
 </div>
-
-
-  <div class="mb-8 text-center">
-    <h2 class="text-3xl font-bold text-white">All Vande Bharat Trains Here</h2>
-  </div>
-  
-  <!-- Horizontal Search Row -->
-  <div class="flex flex-col md:flex-row gap-4 mb-6 justify-center">
-    <input type="text" id="fromStation" list="stationList" placeholder="Departure Station"
-      class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" />
-    <input type="text" id="toStation" list="stationList" placeholder="Arrival Station"
-      class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" />
-    <datalist id="stationList"></datalist>
-    <button onclick="goToSearchResults()"
-      class="w-full md:w-auto px-6 py-3 bg-blue-800 hover:from-blue-700 hover:to-orange-600 text-white font-medium rounded-lg shadow-md transition-all duration-300">
-      <i class="fas fa-search mr-2"></i>Search
+<div class="bg-white rounded-xl p-4 shadow-lg mt-2">
+<h3 class="text-xl font-bold">Stations Covered</h3>
+<p class="text-2xl mt-2 font-semibold">857</p>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-lg mt-2">
+<h3 class="text-xl font-bold">States Covered</h3>
+<p class="text-2xl mt-2 font-semibold">29</p>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-lg mt-2">
+<h3 class="text-xl font-bold">Distance (km)</h3>
+<p class="text-2xl mt-2 font-semibold">50,000+</p>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-lg mt-2">
+<h3 class="text-xl font-bold">Daily Passengers</h3>
+<p class="text-2xl mt-2 font-semibold">90,000+</p>
+</div>
+</div>
+</div>
+<div class="mb-8 text-center">
+<h2 class="text-3xl font-bold text-white">All Vande Bharat Trains Here</h2>
+</div>
+<!-- Horizontal Search Row -->
+<div class="flex flex-col md:flex-row gap-4 mb-6 justify-center">
+<input class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" id="fromStation" list="stationList" placeholder="Departure Station" type="text"/>
+<input class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" id="toStation" list="stationList" placeholder="Arrival Station" type="text"/>
+<datalist id="stationList"></datalist>
+<button class="w-full md:w-auto px-6 py-3 bg-blue-800 hover:from-blue-700 hover:to-orange-600 text-white font-medium rounded-lg shadow-md transition-all duration-300" onclick="goToSearchResults()">
+<i class="fas fa-search mr-2"></i>Search
     </button>
-  </div>
-  <!-- Search Results Table -->
-  
+</div>
+<!-- Search Results Table -->
 </section>
-
-
-<!-- Image Slider Section -->
-<section class="w-full mx-auto px-4 py-10">
-  <div class="text-center mb-6">
-    <h2 class="text-2xl font-bold text-gray-900">
-      <a href="news.html" class="hover:text-orange-500 transition">Upcoming Vande Bharat Trains</a>
-    </h2>
-    <p class="mt-1 text-gray-600">Find latest updates here</p>
-  </div>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="news.html#jammu-post"><img src="news_12.png" alt="Banglore-Shivamogga Route" /></a>
-      </div>
-      <div class="swiper-slide">
-        <a href="news.html#award-post"><img src="news_11.png" alt="Innovation Award" /></a>
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
+<!-- Sliding Window Image Slider: Shift by 1 -->
+<!-- Movie-Style Image Slider (2-at-a-time with autoplay and arrows) -->
+<section class="w-full mx-auto px-4 py-10 relative">
+<div class="text-center mb-6">
+<h2 class="text-2xl font-bold text-gray-900">
+<a class="hover:text-orange-500 transition" href="news.html">Upcoming Vande Bharat Trains</a>
+</h2>
+<p class="mt-1 text-gray-600">Find latest updates here</p>
+</div>
+<div class="relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 transition-all duration-500" id="imageSlider">
+<!-- Images will be injected here -->
+</div>
+<!-- Left Arrow -->
+<button class="absolute top-1/2 left-0 transform -translate-y-1/2 text-4xl text-white bg-black bg-opacity-30 hover:bg-opacity-50 px-3 py-1 rounded-r-lg z-10" onclick="showPrev()">
+      ←
+    </button>
+<!-- Right Arrow -->
+<button class="absolute top-1/2 right-0 transform -translate-y-1/2 text-4xl text-white bg-black bg-opacity-30 hover:bg-opacity-50 px-3 py-1 rounded-l-lg z-10" onclick="showNext()">
+      →
+    </button>
+</div>
 </section>
-
-
-  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: { delay: 5000 },
-      pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    });
-  </script>
+<!-- Updated Upcoming Vande Bharat Trains Section (Split into 2 parts) -->
 <!-- News Section -->
-
 <section class="py-12 bg-white">
-
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold text-gray-900">Latest News</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
 
 Updates about Vande Bharat Express services and expansions
 
 </p>
-
 </div>
-
 <div class="news-ticker">
-
 <div class="news-ticker-content">
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="New Route">
+<img alt="New Route" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 New Delhi-Jammu route to launch next month!
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Award">
+<img alt="Award" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 VanDeBharat Express wins 'Best Rail Innovation' award
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Speed">
+<img alt="Speed" src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 Mumbai-Ahmedabad journey time reduced by 45 minutes
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Charging">
+<img alt="Charging" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"/>
 
 All coaches to get USB-C charging ports by year-end
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1512941937669-90a1b58eafc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile App">
+<img alt="Mobile App" src="https://images.unsplash.com/photo-1512941937669-90a1b58eafc9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 New mobile app for VanDeBharat bookings coming soon
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Friendly">
+<img alt="Eco Friendly" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 Eco-friendly initiatives reduce carbon footprint by 30%
 
 </span>
-
 <span class="news-item">
-
-<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Student Discount">
+<img alt="Student Discount" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 
 Special student discounts announced for semester holidays
 
 </span>
-
 </div>
-
 </div>
-
 <div class="grid md:grid-cols-3 gap-8 mt-12">
-
 <div class="train-card bg-gray-50 rounded-lg overflow-hidden">
-
-<img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="New Route" class="w-full h-48 object-cover">
-
+<img alt="New Route" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 <div class="p-6">
-
 <div class="text-red-600 mb-2 text-sm font-medium">June 15, 2023</div>
-
 <h3 class="text-xl font-bold text-gray-900 mb-3">New Route Announcement</h3>
-
 <p class="text-gray-600">
 
 VanDeBharat Express to connect Mumbai and Goa starting August 2023, reducing travel time to just 5 hours.
 
 </p>
-
 </div>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg overflow-hidden">
-
-<img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Speed Upgrade" class="w-full h-48 object-cover">
-
+<img alt="Speed Upgrade" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
 <div class="p-6">
-
 <div class="text-red-600 mb-2 text-sm font-medium">May 28, 2023</div>
-
 <h3 class="text-xl font-bold text-gray-900 mb-3">Speed Upgrade</h3>
-
 <p class="text-gray-600">
 
 Delhi-Varanasi route achieves 180 km/h in trial runs, promising faster journeys soon.
 
 </p>
-
 </div>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg overflow-hidden">
-
-<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="New Amenities" class="w-full h-48 object-cover">
-
+<img alt="New Amenities" class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=687&amp;q=80"/>
 <div class="p-6">
-
 <div class="text-red-600 mb-2 text-sm font-medium">April 10, 2023</div>
-
 <h3 class="text-xl font-bold text-gray-900 mb-3">New Amenities</h3>
-
 <p class="text-gray-600">
 
 All VanDeBharat trains to get upgraded infotainment systems with regional language options.
 
 </p>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- Routes Section -->
-
-<section id="routes" class="py-12 bg-gray-50">
-
+<section class="py-12 bg-gray-50" id="routes">
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold text-gray-900">Operational Routes</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
 
 Currently operational Vande Bharat Express routes across India
 
 </p>
-
 </div>
-
-
 <!-- State Filter -->
-
 <div class="mb-8 max-w-md mx-auto">
-
-<label for="state-filter" class="block text-sm font-medium text-gray-700 mb-2">Filter by State</label>
-
-<select id="state-filter" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 py-3 px-4">
-
+<label class="block text-sm font-medium text-gray-700 mb-2" for="state-filter">Filter by State</label>
+<select class="block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 py-3 px-4" id="state-filter">
 <option value="all">All States</option>
-
 <option value="Delhi">Delhi</option>
-
-<option value="Jammu & Kashmir">Jammu & Kashmir</option>
-
+<option value="Jammu &amp; Kashmir">Jammu &amp; Kashmir</option>
 <option value="Maharashtra">Maharashtra</option>
-
 <option value="Karnataka">Karnataka</option>
-
 <option value="Telangana">Telangana</option>
-
 <option value="Andhra Pradesh">Andhra Pradesh</option>
-
 <option value="Tamil Nadu">Tamil Nadu</option>
-
 <option value="Uttar Pradesh">Uttar Pradesh</option>
-
 <option value="Bihar">Bihar</option>
-
 <option value="West Bengal">West Bengal</option>
-
 <option value="Punjab">Punjab</option>
-
 </select>
-
 </div>
-
-
-
 <!-- Route Timeline -->
-
 <div class="space-y-8" id="routes-container">
-
 <div class="train-card bg-white rounded-lg shadow-md overflow-hidden">
-
 <div class="p-6">
-
 <div class="flex items-center justify-between">
-
 <h3 class="text-xl font-bold text-gray-900">Patna jn - New Delhi</h3>
-
 <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Train No. 02251</span>
-
 </div>
-
 <div class="mt-4">
-
 <div class="flex items-center">
-
 <div class="text-center">
-
 <div class="bg-blue-900 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-train"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">Patna</p>
-
 </div>
-
 <div class="route-animation mx-4 flex-grow"></div>
-
 <div class="text-center">
-
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-mountain"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">New Delhi</p>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
-
 <p class="text-lg font-semibold">1000 km</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
-
 <p class="text-lg font-semibold">11 hours 30 min</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
-
 <p class="text-lg font-semibold">SMTWT</p>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="train-card bg-white rounded-lg shadow-md overflow-hidden">
-
 <div class="p-6">
-
 <div class="flex items-center justify-between">
-
 <h3 class="text-xl font-bold text-gray-900">New Delhi - Patna</h3>
-
 <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 02252</span>
-
 </div>
-
 <div class="mt-4">
-
 <div class="flex items-center">
-
 <div class="text-center">
-
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-city"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">New Delhi</p>
-
 </div>
-
 <div class="route-animation mx-4 flex-grow"></div>
-
 <div class="text-center">
-
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-umbrella-beach"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">Patna</p>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
-
 <p class="text-lg font-semibold">1000 km</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
-
 <p class="text-lg font-semibold">11 hours 35 min</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
-
 <p class="text-lg font-semibold">Mon, Tue, Thu, Fri, Sat</p>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="train-card bg-white rounded-lg shadow-md overflow-hidden">
-
 <div class="p-6">
-
 <div class="flex items-center justify-between">
-
 <h3 class="text-xl font-bold text-gray-900">Mansa - Kharar</h3>
-
 <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 22445/22446</span>
-
 </div>
-
 <div class="mt-4">
-
 <div class="flex items-center">
-
 <div class="text-center">
-
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-city"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">Mansa</p>
-
 </div>
-
 <div class="route-animation mx-4 flex-grow"></div>
-
 <div class="text-center">
-
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-
 <i class="fas fa-city"></i>
-
 </div>
-
 <p class="mt-1 text-sm font-medium">Kharar</p>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
-
 <p class="text-lg font-semibold">120 km</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
-
 <p class="text-lg font-semibold">1 hour 45 min</p>
-
 </div>
-
 <div>
-
 <h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
-
 <p class="text-lg font-semibold">Daily</p>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
 <!-- More routes can be added similarly -->
-
 <div class="text-center mt-8">
-
-<button id="showMoreRoutes" class="px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 transition-all duration-300">
+<button class="px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 transition-all duration-300" id="showMoreRoutes">
 
 Show All 25 Routes <i class="fas fa-angle-down ml-2"></i>
-
 </button>
-
 </div>
-
-<div id="moreRoutes" class="hidden space-y-8">
-
+<div class="hidden space-y-8" id="moreRoutes">
 <!-- Additional routes would be populated here via JavaScript -->
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- Features Section -->
-
-<section id="features" class="py-12 bg-white">
-
+<section class="py-12 bg-white" id="features">
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold text-gray-900">Premium Amenities</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
 
 Experience world-class facilities onboard Vande Bharat Express
 
 </p>
-
 </div>
-
 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-gradient-to-r from-blue-600 to-orange-500 p-3 rounded-md text-white">
-
 <i class="fas fa-wifi"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">WiFi Connectivity</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 High-speed onboard WiFi allows passengers to stay connected throughout their journey.
 
 </p>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-red-600 p-3 rounded-md text-white">
-
 <i class="fas fa-plug"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">Charging Points</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 Every seat comes with USB and AC charging ports for your electronic devices.
 
 </p>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-red-600 p-3 rounded-md text-white">
-
 <i class="fas fa-tv"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">Infotainment System</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 Personalized entertainment system with movies, music and much more.
 
 </p>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-red-600 p-3 rounded-md text-white">
-
 <i class="fas fa-utensils"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">Catering Service</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 Complimentary onboard meals and beverages included in the fare.
 
 </p>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-red-600 p-3 rounded-md text-white">
-
 <i class="fas fa-wheelchair"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">Accessibility</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 Wheelchair accessible coaches and specially designed toilets for differently-abled passengers.
 
 </p>
-
 </div>
-
 <div class="train-card bg-gray-50 rounded-lg p-6">
-
 <div class="flex items-center mb-4">
-
 <div class="flex-shrink-0 bg-red-600 p-3 rounded-md text-white">
-
 <i class="fas fa-shield-alt"></i>
-
 </div>
-
 <h3 class="ml-3 text-lg font-medium text-gray-900">Safety Features</h3>
-
 </div>
-
 <p class="text-gray-600">
 
 Advanced fire detection system, CCTV cameras, and emergency communication.
 
 </p>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- Gallery Section -->
-
-<section id="gallery" class="py-12 bg-gray-50">
-
+<section class="py-12 bg-gray-50" id="gallery">
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold text-gray-900">Gallery</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
 
 Take a visual tour of Vande Bharat Express interiors and exteriors
 
 </p>
-
 </div>
-
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="exterior.jpg">
-
+<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="exterior.jpg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Modern Exterior Design</h3>
-
 </div>
-
 </div>
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="executive.jpg" alt="Executive Class Interior">
-
+<img alt="Executive Class Interior" class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="executive.jpg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Executive Class Cabin</h3>
-
 </div>
-
 </div>
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="chair.jpg" alt="Chair Car Interior">
-
+<img alt="Chair Car Interior" class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="chair.jpg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Chair Car Interior</h3>
-
 </div>
-
 </div>
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="food.jpeg" alt="Onboard Catering">
-
+<img alt="Onboard Catering" class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="food.jpeg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Onboard Catering Service</h3>
-
 </div>
-
 </div>
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="driver.jpg" alt="Driver's Cabin">
-
+<img alt="Driver's Cabin" class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="driver.jpg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Advanced Driver's Cabin</h3>
-
 </div>
-
 </div>
-
 <div class="train-card overflow-hidden rounded-lg shadow-md">
-
-<img class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="station.jpg" alt="Station View">
-
+<img alt="Station View" class="h-64 w-full object-cover hover:scale-105 transition duration-300" src="station.jpg"/>
 <div class="p-4 bg-white">
-
 <h3 class="font-medium text-gray-900">Ready for Departure</h3>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- Facts Section -->
-
 <section class="py-12 bg-gradient-to-r from-blue-900 to-orange-600 text-white">
-
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold">Did You Know?</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg">Interesting facts about VanDeBharat Express</p>
-
 </div>
-
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
 <div class="text-center">
-
 <div class="text-4xl font-bold mb-3">16</div>
-
 <p>Number of coaches in VanDeBharat Express</p>
-
 </div>
-
 <div class="text-center">
-
 <div class="text-4xl font-bold mb-3">2</div>
-
 <p>Driving trailer coaches with aerodynamic nose cone</p>
-
 </div>
-
 <div class="text-center">
-
 <div class="text-4xl font-bold mb-3">115</div>
-
 <p>Minutes saved compared to fastest current train between Delhi and Varanasi</p>
-
 </div>
-
 <div class="text-center">
-
 <div class="text-4xl font-bold mb-3">100%</div>
-
 <p>Make in India initiative designed and manufactured by ICF Chennai</p>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- Contact Section -->
-
-<section id="contact" class="py-12 bg-white">
-
+<section class="py-12 bg-white" id="contact">
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
-
 <div class="text-center mb-12">
-
 <h2 class="text-3xl font-bold text-gray-900">Contact Indian Railways</h2>
-
 <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
 
 Have questions about Vande Bharat Express? Get in touch with us.
 
 </p>
-
 </div>
-
-<div class="grid md:grid-cols-2 gap-8 ">
-
+<div class="grid md:grid-cols-2 gap-8">
 <div class="bg-gray-50 rounded-lg p-8">
-
 <h3 class="text-xl font-bold text-gray-900 mb-6">Contact Website Admin</h3>
-
 <div class="space-y-4">
-
 <div class="flex">
-
 <div class="flex-shrink-0 bg-red-600 text-white p-3 rounded-md">
-
 <i class="fas fa-envelope"></i>
-
 </div>
-
 <div class="ml-4">
-
 <h4 class="text-lg font-medium text-gray-900">Website Enquiries</h4>
-
 <p class="text-gray-600">pardhyuman8@gmail.com</p>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
-
 </div>
-
 </div>
-
 </section>
-
 <div class="bg-white shadow-md rounded-lg p-8">
-  <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-
-  <form id="contactForm" class="space-y-6">
-    <div class="alert text-sm text-green-600">Your message</div>
-
-    <div>
-      <input
-        type="text"
-        id="name"
-        placeholder="Your name..."
-        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-      />
-    </div>
-
-    <div>
-      <input
-        type="email"
-        id="emailid"
-        placeholder="Your Email..."
-        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-      />
-    </div>
-
-    <div>
-      <textarea
-        id="msgContent"
-        cols="30"
-        rows="6"
-        placeholder="Message"
-        class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-      ></textarea>
-    </div>
-
-    <div>
-      <button
-        type="submit"
-        class="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium py-3 px-6 rounded-md shadow-md transition-all duration-300"
-      >
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+<form class="space-y-6" id="contactForm">
+<div class="alert text-sm text-green-600">Your message</div>
+<div>
+<input class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" id="name" placeholder="Your name..." type="text"/>
+</div>
+<div>
+<input class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" id="emailid" placeholder="Your Email..." type="email"/>
+</div>
+<div>
+<textarea class="w-full px-4 py-3 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" cols="30" id="msgContent" placeholder="Message" rows="6"></textarea>
+</div>
+<div>
+<button class="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium py-3 px-6 rounded-md shadow-md transition-all duration-300" type="submit">
         Submit
       </button>
-    </div>
-  </form>
 </div>
-
-
+</form>
+</div>
 <!-- Footer -->
-
 <footer class="bg-gradient-to-r from-blue-950 to-blue-800 text-white">
-
 <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
 <div>
-
 <h3 class="text-lg font-bold mb-4">Vande Bharat Express</h3>
-
 <p class="text-gray-400">
 
 India's semi-high speed train showcasing the country's engineering capabilities.
 
 </p>
-
 <div class="mt-4 flex space-x-4">
-
-<a href="#" class="text-gray-400 hover:text-white">
-
+<a class="text-gray-400 hover:text-white" href="#">
 <i class="fab fa-facebook-f"></i>
-
 </a>
-
-<a href="#" class="text-gray-400 hover:text-white">
-
+<a class="text-gray-400 hover:text-white" href="#">
 <i class="fab fa-twitter"></i>
-
 </a>
-
-<a href="#" class="text-gray-400 hover:text-white">
-
+<a class="text-gray-400 hover:text-white" href="#">
 <i class="fab fa-instagram"></i>
-
 </a>
-
-<a href="#" class="text-gray-400 hover:text-white">
-
+<a class="text-gray-400 hover:text-white" href="#">
 <i class="fab fa-youtube"></i>
-
 </a>
-
 </div>
-
 </div>
-
 <div>
-
 <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-
 <ul class="space-y-2">
-
-<li><a href="#routes" class="text-gray-400 hover:text-white">Routes</a></li>
-
-<li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
-
-<li><a href="#gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
-
+<li><a class="text-gray-400 hover:text-white" href="#routes">Routes</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#features">Features</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#gallery">Gallery</a></li>
 </ul>
-
 </div>
-
 <div>
-
 <h3 class="text-lg font-bold mb-4">Railway Links</h3>
-
 <ul class="space-y-2">
-
-<li><a href="https://indianrailways.gov.in" target="_blank" class="text-gray-400 hover:text-white">Indian Railways</a></li>
-
-<li><a href="https://irctc.co.in" target="_blank" class="text-gray-400 hover:text-white">IRCTC</a></li>
-
-<li><a href="https://www.railyatri.in" target="_blank" class="text-gray-400 hover:text-white">RailYatri</a></li>
-
-<li><a href="https://enquiry.indianrail.gov.in" target="_blank" class="text-gray-400 hover:text-white">Railway Enquiry</a></li>
-
+<li><a class="text-gray-400 hover:text-white" href="https://indianrailways.gov.in" target="_blank">Indian Railways</a></li>
+<li><a class="text-gray-400 hover:text-white" href="https://irctc.co.in" target="_blank">IRCTC</a></li>
+<li><a class="text-gray-400 hover:text-white" href="https://www.railyatri.in" target="_blank">RailYatri</a></li>
+<li><a class="text-gray-400 hover:text-white" href="https://enquiry.indianrail.gov.in" target="_blank">Railway Enquiry</a></li>
 </ul>
-
 </div>
-
 <div>
-
 <h3 class="text-lg font-bold mb-4">Newsletter</h3>
-
 <p class="text-gray-400 mb-4">Subscribe for updates on new Vande Bharat routes</p>
-
 <form class="flex">
-
-<input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full">
-
-<button type="submit" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md">
-
+<input class="px-4 py-2 rounded-l-md text-gray-900 w-full" placeholder="Your email" type="email"/>
+<button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md" type="submit">
 <i class="fas fa-paper-plane"></i>
-
 </button>
-
 </form>
-
 </div>
-
 </div>
-
 <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-
 <p>© 2023 Indian Railways. All rights reserved.</p>
-
 </div>
-
 </div>
-
 </footer>
-
-
 <script>
 
 // Mobile menu toggle
@@ -1704,7 +1160,7 @@ observer.observe(card);
       }
     }
   </script>
-  <script>
+<script>
   // Populate station suggestions
   fetch("trains.json")
     .then(res => res.json())
@@ -1723,9 +1179,50 @@ observer.observe(card);
       });
     });
 </script>
+<script>
+  const images = [
+    { src: "news_12.png", alt: "Banglore-Shivamogga Route", link: "news.html#jammu-post" },
+    { src: "news_11.png", alt: "Innovation Award", link: "news.html#award-post" },
+    { src: "news_10.png", alt: "Third Train Update", link: "news.html#pune-4" },
+    { src: "news_09.png", alt: "Fourth Train Update", link: "news.html#pune-4" }
+  ];
 
+  let currentIndex = 0;
+  let interval;
+
+  function renderImages() {
+    const container = document.getElementById("imageSlider");
+    container.innerHTML = "";
+
+    for (let i = currentIndex; i < currentIndex + 2 && i < images.length; i++) {
+      const imgBlock = `
+        <div class="rounded-lg overflow-hidden shadow-md transition-all duration-500">
+          <a href="${images[i].link}">
+            <img src="${images[i].src}" alt="${images[i].alt}" class="w-full h-auto max-h-[400px] object-contain mx-auto" />
+          </a>
+        </div>
+      `;
+      container.innerHTML += imgBlock;
+    }
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % (images.length - 1);
+    renderImages();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length - 1) % (images.length - 1);
+    renderImages();
+  }
+
+  function startAutoplay() {
+    interval = setInterval(showNext, 5000);
+  }
+
+  // Start
+  renderImages();
+  startAutoplay();
+</script>
 </body>
-
 </html>
-
-
