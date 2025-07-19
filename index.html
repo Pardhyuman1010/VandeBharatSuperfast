@@ -37,7 +37,7 @@
 <title></title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://unpkg.com/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -230,7 +230,7 @@ border: 2px solid #dc2626;
 }
 
 </style>
-</head>
+</link></head>
 <body>
 <!-- Navigation -->
 <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
@@ -308,38 +308,29 @@ border: 2px solid #dc2626;
     </button>
 </div>
 </section>
-<section class="w-full mx-auto px-0 py-10 pb-2">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
-    <!-- Left: Image Slider -->
-    <div class="relative w-full h-80 overflow-hidden rounded-lg shadow-md -mt-9" id="customImageSlider">
-  <img id="sliderImage" src="news_12.png"
-       class="absolute inset-0 w-full h-full object-cover m-0 p-0 block align-top rounded-lg transition duration-500" />
-  <button onclick="changeSlide(-1)"
-          class="absolute top-1/2 left-0 transform -translate-y-1/2 text-3xl text-white bg-black bg-opacity-30 hover:bg-opacity-60 px-3 py-1 rounded-r-md z-10">←</button>
-  <button onclick="changeSlide(1)"
-          class="absolute top-1/2 right-0 transform -translate-y-1/2 text-3xl text-white bg-black bg-opacity-30 hover:bg-opacity-60 px-3 py-1 rounded-l-md z-10">→</button>
-</div>
-
-    <!-- Right: State-wise Table (moved upward using margin) -->
-    <div class="mt-[-40px]">
-      <table class="min-w-full bg-white rounded-lg shadow-md text-sm">
-        <thead class="bg-blue-100 text-blue-900 font-semibold">
-          <tr>
-            <th class="px-4 py-2 text-left">State</th>
-            <th class="px-4 py-2 text-left">Number of Trains</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700" id="stateTrainTableBody">
-          <!-- JS will populate -->
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-</section>
 
 <!-- Movie-Style Image Slider (2-at-a-time with autoplay and arrows) -->
+<section class="w-full mx-auto px-4 py-4 relative">
+<div class="text-center mb-6">
+<h2 class="text-2xl font-bold text-gray-900">
+<a class="hover:text-orange-500 transition" href="news.html">Upcoming Vande Bharat Trains</a>
+</h2>
+</div>
+<div class="relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 transition-all duration-500" id="imageSlider">
+<!-- Images will be injected here -->
+</div>
+<!-- Left Arrow -->
+<button class="absolute top-1/2 left-0 transform -translate-y-1/2 text-4xl text-white bg-black bg-opacity-30 hover:bg-opacity-50 px-3 py-1 rounded-r-lg z-10" onclick="showPrev()">
+      ←
+    </button>
+<!-- Right Arrow -->
+<button class="absolute top-1/2 right-0 transform -translate-y-1/2 text-4xl text-white bg-black bg-opacity-30 hover:bg-opacity-50 px-3 py-1 rounded-l-lg z-10" onclick="showNext()">
+      →
+    </button>
+</div>
+</section>
 <!-- Updated Upcoming Vande Bharat Trains Section (Split into 2 parts) -->
 <!-- News Section -->
 <section class="py-12 bg-white">
@@ -1187,45 +1178,50 @@ observer.observe(card);
       });
     });
 </script>
-
 <script>
-  const stateWiseTrains = [
-    { state: "Maharashtra", count: 8 },
-    { state: "Tamil Nadu", count: 6 },
-    { state: "Karnataka", count: 5 },
-    { state: "Uttar Pradesh", count: 9 },
-    { state: "Delhi", count: 7 },
-    { state: "Gujarat", count: 5 },
-    { state: "Bihar", count: 4 },
-    { state: "Telangana", count: 3 }
+  const images = [
+    { src: "news_12.png", alt: "Banglore-Shivamogga Route", link: "news.html#jammu-post" },
+    { src: "news_11.png", alt: "Innovation Award", link: "news.html#award-post" },
+    { src: "news_9.png", alt: "Third Train Update", link: "news.html#bundelkhand" },
+    { src: "news_10.png", alt: "Fourth Train Update", link: "news.html#pune-4" }
   ];
 
-  const tbody = document.getElementById("stateTrainTableBody");
-  stateWiseTrains.forEach(({ state, count }) => {
-    const row = `<tr>
-      <td class="px-4 py-2 border-b">${state}</td>
-      <td class="px-4 py-2 border-b font-semibold">${count}</td>
-    </tr>`;
-    tbody.innerHTML += row;
-  });
-</script>
-<script>
-  const sliderImages = ["news_12.png", "news_11.png", "news_10.png"]; // Add your image file names here
-  let currentSlide = 0;
+  let currentIndex = 0;
+  let interval;
 
-  function changeSlide(direction) {
-    currentSlide += direction;
+  function renderImages() {
+    const container = document.getElementById("imageSlider");
+    container.innerHTML = "";
 
-    // Wrap around
-    if (currentSlide < 0) currentSlide = sliderImages.length - 1;
-    if (currentSlide >= sliderImages.length) currentSlide = 0;
-
-    // Change the image
-    document.getElementById("sliderImage").src = sliderImages[currentSlide];
+    for (let i = currentIndex; i < currentIndex + 2 && i < images.length; i++) {
+      const imgBlock = `
+        <div class="rounded-lg overflow-hidden shadow-md transition-all duration-500">
+          <a href="${images[i].link}">
+            <img src="${images[i].src}" alt="${images[i].alt}" class="w-full h-auto max-h-[400px] object-contain mx-auto" />
+          </a>
+        </div>
+      `;
+      container.innerHTML += imgBlock;
+    }
   }
-</script>
-<script>
-  setInterval(() => changeSlide(1), 5000); // Change every 5 seconds
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % (images.length - 1);
+    renderImages();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length - 1) % (images.length - 1);
+    renderImages();
+  }
+
+  function startAutoplay() {
+    interval = setInterval(showNext, 5000);
+  }
+
+  // Start
+  renderImages();
+  startAutoplay();
 </script>
 </body>
 </html>
