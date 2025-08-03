@@ -472,14 +472,14 @@ Currently operational Vande Bharat Express routes across India
 <div class="bg-blue-900 text-white rounded-full h-10 w-10 flex items-center justify-center">
 <i class="fas fa-train"></i>
 </div>
-<p class="mt-1 text-sm font-medium">Patna</p>
+<p class="mt-1 text-sm font-medium">Patna  07:30 AM</p>
 </div>
 <div class="route-animation mx-4 flex-grow"></div>
 <div class="text-center">
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
 <i class="fas fa-mountain"></i>
 </div>
-<p class="mt-1 text-sm font-medium">New Delhi</p>
+<p class="mt-1 text-sm font-medium">New Delhi  07:00 PM</p>
 </div>
 </div>
 </div>
@@ -499,89 +499,72 @@ Currently operational Vande Bharat Express routes across India
 </div>
 </div>
 </div>
+
+
+
+
+
+<!-- 02301 -->
+
+
+
+
+<div class="space-y-8" id="routes-container">
 <div class="train-card bg-white rounded-lg shadow-md overflow-hidden">
 <div class="p-6">
 <div class="flex items-center justify-between">
-<h3 class="text-xl font-bold text-gray-900">New Delhi - Patna</h3>
-<span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 02252</span>
+<h3 class="text-xl font-bold text-gray-900">Howrah jn - New JalPaiguri</h3>
+<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">Train No. 02301</span>
 </div>
 <div class="mt-4">
 <div class="flex items-center">
 <div class="text-center">
-<div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-<i class="fas fa-city"></i>
+<div class="bg-blue-900 text-white rounded-full h-10 w-10 flex items-center justify-center">
+<i class="fas fa-train"></i>
 </div>
-<p class="mt-1 text-sm font-medium">New Delhi</p>
+<p class="mt-1 text-sm font-medium">Howrah jn  05:55 AM</p>
 </div>
 <div class="route-animation mx-4 flex-grow"></div>
 <div class="text-center">
 <div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-<i class="fas fa-umbrella-beach"></i>
+<i class="fas fa-mountain"></i>
 </div>
-<p class="mt-1 text-sm font-medium">Patna</p>
+<p class="mt-1 text-sm font-medium">New JaiPaiguri  01:25 PM</p>
 </div>
 </div>
 </div>
 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
 <div>
 <h4 class="text-sm font-medium text-gray-500">Distance</h4>
-<p class="text-lg font-semibold">1000 km</p>
+<p class="text-lg font-semibold">561 km</p>
 </div>
 <div>
 <h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
-<p class="text-lg font-semibold">11 hours 35 min</p>
+<p class="text-lg font-semibold">7 hours 30 min</p>
 </div>
 <div>
 <h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
-<p class="text-lg font-semibold">Mon, Tue, Thu, Fri, Sat</p>
+<p class="text-lg font-semibold">SMTWT</p>
 </div>
 </div>
 </div>
 </div>
-<div class="train-card bg-white rounded-lg shadow-md overflow-hidden">
-<div class="p-6">
-<div class="flex items-center justify-between">
-<h3 class="text-xl font-bold text-gray-900">Mansa - Kharar</h3>
-<span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Train No. 22445/22446</span>
-</div>
-<div class="mt-4">
-<div class="flex items-center">
-<div class="text-center">
-<div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-<i class="fas fa-city"></i>
-</div>
-<p class="mt-1 text-sm font-medium">Mansa</p>
-</div>
-<div class="route-animation mx-4 flex-grow"></div>
-<div class="text-center">
-<div class="bg-red-600 text-white rounded-full h-10 w-10 flex items-center justify-center">
-<i class="fas fa-city"></i>
-</div>
-<p class="mt-1 text-sm font-medium">Kharar</p>
-</div>
-</div>
-</div>
-<div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-<div>
-<h4 class="text-sm font-medium text-gray-500">Distance</h4>
-<p class="text-lg font-semibold">120 km</p>
-</div>
-<div>
-<h4 class="text-sm font-medium text-gray-500">Travel Time</h4>
-<p class="text-lg font-semibold">1 hour 45 min</p>
-</div>
-<div>
-<h4 class="text-sm font-medium text-gray-500">Days of Operation</h4>
-<p class="text-lg font-semibold">Daily</p>
-</div>
-</div>
-</div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 <!-- More routes can be added similarly -->
 <div class="text-center mt-8">
 <button class="px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 transition-all duration-300" id="showMoreRoutes">
 
-Show All 25 Routes <i class="fas fa-angle-down ml-2"></i>
+Show All 106 Routes <i class="fas fa-angle-down ml-2"></i>
 </button>
 </div>
 <div class="hidden space-y-8" id="moreRoutes">
@@ -918,70 +901,1171 @@ if (moreRoutes.classList.contains('hidden')) {
 const additionalRoutes = [
 
 {
-
-name: "Bengaluru - Dharwad",
-
-number: "20661/20662",
-
-from: "Bengaluru",
-
-to: "Dharwad",
-
-fromIcon: "fa-city",
-
-toIcon: "fa-landmark",
-
-distance: "490 km",
-
-time: "7 hours 30 min",
-
-days: "Sun, Wed, Thu, Sat"
-
-},
-
-{
-
-name: "Secunderabad - Visakhapatnam",
-
-number: "20833/20834",
-
-from: "Secunderabad",
-
-to: "Visakhapatnam",
-
-fromIcon: "fa-city",
-
-toIcon: "fa-umbrella-beach",
-
-distance: "700 km",
-
-time: "8 hours 30 min",
-
-days: "Daily"
-
-},
-
-{
-
-name: "Chennai Central - Mysuru",
-
-number: "20607/20608",
-
-from: "Chennai",
-
-to: "Mysuru",
-
-fromIcon: "fa-city",
-
-toIcon: "fa-landmark",
-
-distance: "500 km",
-
-time: "7 hours",
-
-days: "Tue, Thu, Sat"
-
-}
+    "name": "PNBE VandeBharat",
+    "number": "2251",
+    "from": "Patna Jn 07:30 ",
+    "to": "New Delhi 19:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "1000 km",
+    "time": "11hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "2252",
+    "from": "New Delhi 07:25 ",
+    "to": "Patna Jn 19:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "1000 km",
+    "time": "11hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "2301",
+    "from": "Howrah Jn 05:55 ",
+    "to": "New Jalpaiguri 13:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "561 km",
+    "time": "7hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "NJP VandeBharat",
+    "number": "2302",
+    "from": "New Jalpaiguri 15:00 ",
+    "to": "Howrah Jn 22:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "561 km",
+    "time": "7hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "2311",
+    "from": "Howrah Jn 06:10 ",
+    "to": "Puri 12:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "502 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "PURI VandeBharat",
+    "number": "2312",
+    "from": "Puri 13:50 ",
+    "to": "Howrah Jn 20:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "502 km",
+    "time": "6hr 40min",
+    "days": "All Days"
+  },
+  {
+    "name": "JU VandeBharat",
+    "number": "12461",
+    "from": "Jodhpur Jn 06:05 ",
+    "to": "Sabarmati Bg 12:05",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "449 km",
+    "time": "6hr",
+    "days": "All Days"
+  },
+  {
+    "name": "SBIB VandeBharat",
+    "number": "12462",
+    "from": "Sabarmati Bg 16:45 ",
+    "to": "Jodhpur Jn 22:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "449 km",
+    "time": "6hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "RKMP VandeBharat",
+    "number": "20171",
+    "from": "Rani Kamalapati 05:40 ",
+    "to": "H Nizamuddin 13:16",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "700 km",
+    "time": "7hr 36min",
+    "days": "All Days"
+  },
+  {
+    "name": "NZM VandeBharat",
+    "number": "20172",
+    "from": "H Nizamuddin 14:40 ",
+    "to": "Rani Kamalapati 22:16",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "700 km",
+    "time": "7hr 36min",
+    "days": "All Days"
+  },
+  {
+    "name": "RKMP VandeBharat",
+    "number": "20173",
+    "from": "Rani Kamalapati 15:30 ",
+    "to": "Rewa 23:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "569 km",
+    "time": "8hr",
+    "days": "All Days"
+  },
+  {
+    "name": "REWA VandeBharat",
+    "number": "20174",
+    "from": "Rewa 05:30 ",
+    "to": "Rani Kamalapati 13:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "576 km",
+    "time": "8hr",
+    "days": "All Days"
+  },
+  {
+    "name": "MAS VandeBharat",
+    "number": "20607",
+    "from": "Mgr Chennai Ctl 05:50 ",
+    "to": "Mysuru Jn 12:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "6hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "MYS VandeBharat",
+    "number": "20608",
+    "from": "Mysuru Jn 13:05 ",
+    "to": "Mgr Chennai Ctl 19:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "6hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "KGQ VandeBharat",
+    "number": "20633",
+    "from": "Kasaragod 14:30 ",
+    "to": "Trivandrum Cntl 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "588 km",
+    "time": "8hr 10min",
+    "days": "All Days"
+  },
+  {
+    "name": "TVC VandeBharat",
+    "number": "20634",
+    "from": "Trivandrum Cntl 05:15 ",
+    "to": "Kasaragod 13:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "588 km",
+    "time": "8hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "BNC VandeBharat",
+    "number": "20641",
+    "from": "KSR Bengaluru Cant 14:20 ",
+    "to": "Coimbatore Jn 20:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "377 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "CBE VandeBharat",
+    "number": "20642",
+    "from": "Coimbatore Jn 07:25 ",
+    "to": "Bengaluru Cant 13:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "377 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAS VandeBharat",
+    "number": "20643",
+    "from": "Mgr Chennai Ctl 14:15 ",
+    "to": "Coimbatore Jn 20:15",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "497 km",
+    "time": "6hr",
+    "days": "All Days"
+  },
+  {
+    "name": "CBE VandeBharat",
+    "number": "20644",
+    "from": "Coimbatore Jn 06:00 ",
+    "to": "Mgr Chennai Ctl 11:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "497 km",
+    "time": "5hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAO VandeBharat",
+    "number": "20645",
+    "from": "Madgaon 18:10 ",
+    "to": "Mangaluru Cntl 22:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "4hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAQ VandeBharat",
+    "number": "20646",
+    "from": "Mangaluru Cntl 08:30 ",
+    "to": "Madgaon 13:15",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "4hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "SBC VandeBharat",
+    "number": "20661",
+    "from": "KSR Bengaluru 05:45 ",
+    "to": "Dharwar 12:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "490 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "DWR VandeBharat",
+    "number": "20662",
+    "from": "Dharwar 13:15 ",
+    "to": "KSR Bengaluru 19:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "490 km",
+    "time": "6hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "MYS VandeBharat",
+    "number": "20663",
+    "from": "Mysuru Jn 06:00 ",
+    "to": "Mgr Chennai Ctl 12:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAS VandeBharat",
+    "number": "20664",
+    "from": "Mgr Chennai Ctl 17:00 ",
+    "to": "Mysuru Jn 23:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "6hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "MS VandeBharat",
+    "number": "20665",
+    "from": "Chennai Egmore 14:50 ",
+    "to": "Tirunelveli 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "653 km",
+    "time": "7hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "TEN VandeBharat",
+    "number": "20666",
+    "from": "Tirunelveli 06:00 ",
+    "to": "Chennai Egmore 13:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "653 km",
+    "time": "7hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAS VandeBharat",
+    "number": "20677",
+    "from": "Mgr Chennai Ctl 05:30 ",
+    "to": "Vijayawada Jn 12:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "517 km",
+    "time": "6hr 40min",
+    "days": "All Days"
+  },
+  {
+    "name": "BZA VandeBharat",
+    "number": "20678",
+    "from": "Vijayawada Jn 15:20 ",
+    "to": "Mgr Chennai Ctl 22:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "517 km",
+    "time": "6hr 40min",
+    "days": "All Days"
+  },
+  {
+    "name": "SC VandeBharat",
+    "number": "20701",
+    "from": "Secunderabad Jn 06:15 ",
+    "to": "Tirupati 14:34",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "661 km",
+    "time": "8hr 19min",
+    "days": "All Days"
+  },
+  {
+    "name": "TPTY VandeBharat",
+    "number": "20702",
+    "from": "Tirupati 15:15 ",
+    "to": "Secunderabad Jn 23:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "661 km",
+    "time": "8hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "KCG VandeBharat",
+    "number": "20703",
+    "from": "Kacheguda 05:45 ",
+    "to": "Yesvantpur Jn 14:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "610 km",
+    "time": "8hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "YPR VandeBharat",
+    "number": "20704",
+    "from": "Yesvantpur Jn 14:45 ",
+    "to": "Kacheguda 23:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "610 km",
+    "time": "8hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "J VandeBharat",
+    "number": "20705",
+    "from": "Jalna 05:05 ",
+    "to": "C Shivaji Mah T 11:55",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "6hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "CSMT VandeBharat",
+    "number": "20706",
+    "from": "C Shivaji Mah T 13:10 ",
+    "to": "Jalna 20:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "7hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "SC VandeBharat",
+    "number": "20707",
+    "from": "Secunderabad Jn 05:05 ",
+    "to": "Visakhapatnam 13:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "699 km",
+    "time": "8hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "VSKP VandeBharat",
+    "number": "20708",
+    "from": "Visakhapatnam 14:35 ",
+    "to": "Secunderabad Jn 23:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "699 km",
+    "time": "8hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "BSP VandeBharat",
+    "number": "20825",
+    "from": "Bilaspur Jn 06:45 ",
+    "to": "Nagpur 12:15",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "413 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "NGP VandeBharat",
+    "number": "20826",
+    "from": "Nagpur 14:05 ",
+    "to": "Bilaspur Jn 19:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "413 km",
+    "time": "5hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "VSKP VandeBharat",
+    "number": "20833",
+    "from": "Visakhapatnam 05:45 ",
+    "to": "Secunderabad Jn 14:15",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "699 km",
+    "time": "8hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "SC VandeBharat",
+    "number": "20834",
+    "from": "Secunderabad Jn 15:00 ",
+    "to": "Visakhapatnam 23:31",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "699 km",
+    "time": "8hr 31min",
+    "days": "All Days"
+  },
+  {
+    "name": "ROU VandeBharat",
+    "number": "20835",
+    "from": "Rourkela 14:10 ",
+    "to": "Puri 21:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "505 km",
+    "time": "7hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "PURI VandeBharat",
+    "number": "20836",
+    "from": "Puri 05:00 ",
+    "to": "Rourkela 12:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "504 km",
+    "time": "7hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "BBS VandeBharat",
+    "number": "20841",
+    "from": "Bhubaneswar 05:15 ",
+    "to": "Visakhapatnam 11:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "443 km",
+    "time": "5hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "VSKP VandeBharat",
+    "number": "20842",
+    "from": "Visakhapatnam 15:30 ",
+    "to": "Bhubaneswar 21:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "443 km",
+    "time": "6hr",
+    "days": "All Days"
+  },
+  {
+    "name": "RNC VandeBharat",
+    "number": "20887",
+    "from": "Ranchi 05:10 ",
+    "to": "Varanasi Jn 13:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "536 km",
+    "time": "7hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "BSB VandeBharat",
+    "number": "20888",
+    "from": "Varanasi Jn 16:05 ",
+    "to": "Ranchi 23:55",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "536 km",
+    "time": "7hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "20897",
+    "from": "Howrah Jn 15:45 ",
+    "to": "Ranchi 22:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "462 km",
+    "time": "7hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "RNC VandeBharat",
+    "number": "20898",
+    "from": "Ranchi 06:00 ",
+    "to": "Howrah Jn 13:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "462 km",
+    "time": "7hr 10min",
+    "days": "All Days"
+  },
+  {
+    "name": "MMCT VandeBharat",
+    "number": "20901",
+    "from": "Mumbai Central 06:00 ",
+    "to": "Gandhinagar Cap 12:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "520 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "GNC VandeBharat",
+    "number": "20902",
+    "from": "Gandhinagar Cap 14:05 ",
+    "to": "Mumbai Central 20:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "520 km",
+    "time": "6hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "INDB VandeBharat",
+    "number": "20911",
+    "from": "Indore Jn Bg 06:10 ",
+    "to": "Nagpur 14:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "635 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "NGP VandeBharat",
+    "number": "20912",
+    "from": "Nagpur 15:20 ",
+    "to": "Indore Jn Bg 23:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "642 km",
+    "time": "8hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "AII VandeBharat",
+    "number": "20977",
+    "from": "Ajmer Jn 06:20 ",
+    "to": "Chandigarh 14:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "700 km",
+    "time": "8hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "CDG VandeBharat",
+    "number": "20978",
+    "from": "Chandigarh 15:15 ",
+    "to": "Ajmer Jn 23:55",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "700 km",
+    "time": "8hr 40min",
+    "days": "All Days"
+  },
+  {
+    "name": "UDZ VandeBharat",
+    "number": "20979",
+    "from": "Udaipur City 07:50 ",
+    "to": "Jaipur 14:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "435 km",
+    "time": "6hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "JP VandeBharat",
+    "number": "20980",
+    "from": "Jaipur 15:45 ",
+    "to": "Udaipur City 22:08",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "435 km",
+    "time": "6hr 23min",
+    "days": "All Days"
+  },
+  {
+    "name": "CSMT VandeBharat",
+    "number": "22223",
+    "from": "C Shivaji Mah T 06:20 ",
+    "to": "Sainagar Shirdi 11:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "343 km",
+    "time": "5hr 10min",
+    "days": "All Days"
+  },
+  {
+    "name": "SNSI VandeBharat",
+    "number": "22224",
+    "from": "Sainagar Shirdi 17:45 ",
+    "to": "Dadar 22:28",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "334 km",
+    "time": "4hr 43min",
+    "days": "All Days"
+  },
+  {
+    "name": "CSMT VandeBharat",
+    "number": "22225",
+    "from": "C Shivaji Mah T 16:05 ",
+    "to": "Solapur Jn 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "455 km",
+    "time": "6hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "SUR VandeBharat",
+    "number": "22226",
+    "from": "Solapur Jn 06:05 ",
+    "to": "C Shivaji Mah T 12:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "455 km",
+    "time": "6hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "NJP VandeBharat",
+    "number": "22227",
+    "from": "New Jalpaiguri 06:10 ",
+    "to": "Guwahati 11:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "409 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "GHY VandeBharat",
+    "number": "22228",
+    "from": "Guwahati 16:30 ",
+    "to": "New Jalpaiguri 22:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "409 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "DR VandeBharat",
+    "number": "22229",
+    "from": "Dadar 05:34 ",
+    "to": "Madgaon 13:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "765 km",
+    "time": "7hr 36min",
+    "days": "All Days"
+  },
+  {
+    "name": "MAO VandeBharat",
+    "number": "22230",
+    "from": "Madgaon 14:40 ",
+    "to": "C Shivaji Mah T 22:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "765 km",
+    "time": "7hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "KLBG VandeBharat",
+    "number": "22231",
+    "from": "Kalaburagi 05:15 ",
+    "to": "Smvt Bengaluru 14:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "547 km",
+    "time": "8hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "SMVB VandeBharat",
+    "number": "22232",
+    "from": "Smvt KSR Bengaluru 14:40 ",
+    "to": "Kalaburagi 23:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "547 km",
+    "time": "8hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "NJP VandeBharat",
+    "number": "22233",
+    "from": "New Jalpaiguri 05:15 ",
+    "to": "Patna Jn 12:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "471 km",
+    "time": "6hr 55min",
+    "days": "All Days"
+  },
+  {
+    "name": "PNBE VandeBharat",
+    "number": "22234",
+    "from": "Patna Jn 13:00 ",
+    "to": "New Jalpaiguri 20:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "471 km",
+    "time": "7hr",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "22301",
+    "from": "Howrah Jn 05:55 ",
+    "to": "New Jalpaiguri 13:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "561 km",
+    "time": "7hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "NJP VandeBharat",
+    "number": "22302",
+    "from": "New Jalpaiguri 15:00 ",
+    "to": "Howrah Jn 22:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "561 km",
+    "time": "7hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "PNBE VandeBharat",
+    "number": "22345",
+    "from": "Patna Jn 06:05 ",
+    "to": "Gomati Nagar 14:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "544 km",
+    "time": "8hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "GTNR VandeBharat",
+    "number": "22346",
+    "from": "Gomati Nagar 15:20 ",
+    "to": "Patna Jn 23:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "544 km",
+    "time": "8hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "22347",
+    "from": "Howrah Jn 15:50 ",
+    "to": "Patna Jn 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "532 km",
+    "time": "6hr 50min",
+    "days": "All Days"
+  },
+  {
+    "name": "PNBE VandeBharat",
+    "number": "22348",
+    "from": "Patna Jn 08:00 ",
+    "to": "Howrah Jn 14:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "532 km",
+    "time": "6hr 35min",
+    "days": "All Days"
+  },
+  {
+    "name": "PNBE VandeBharat",
+    "number": "22349",
+    "from": "Patna Jn 07:00 ",
+    "to": "Ranchi 13:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "379 km",
+    "time": "6hr",
+    "days": "All Days"
+  },
+  {
+    "name": "RNC VandeBharat",
+    "number": "22350",
+    "from": "Ranchi 16:15 ",
+    "to": "Patna Jn 22:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "379 km",
+    "time": "5hr 55min",
+    "days": "All Days"
+  },
+  {
+    "name": "BSB VandeBharat",
+    "number": "22415",
+    "from": "Varanasi Jn 06:00 ",
+    "to": "New Delhi 14:05",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "760 km",
+    "time": "8hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "22416",
+    "from": "New Delhi 15:00 ",
+    "to": "Varanasi Jn 23:05",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "760 km",
+    "time": "8hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "AYC VandeBharat",
+    "number": "22425",
+    "from": "Ayodhaya Cant 15:20 ",
+    "to": "Anand Vihar TRM 23:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "629 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "ANVT VandeBharat",
+    "number": "22426",
+    "from": "Anand Vihar TRM 06:10 ",
+    "to": "Ayodhaya Cant 14:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "629 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "BSB VandeBharat",
+    "number": "22435",
+    "from": "Varanasi Jn 15:00 ",
+    "to": "New Delhi 23:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "771 km",
+    "time": "8hr",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "22436",
+    "from": "New Delhi 06:00 ",
+    "to": "Varanasi Jn 14:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "771 km",
+    "time": "8hr",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "22439",
+    "from": "New Delhi 06:00 ",
+    "to": "Shri Mata Vaishno Devi Katra 14:05",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "655 km",
+    "time": "8hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "SVDK VandeBharat",
+    "number": "22440",
+    "from": "Shri Mata Vaishno Devi Katra 14:55 ",
+    "to": "New Delhi 23:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "655 km",
+    "time": "8hr 5min",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "22447",
+    "from": "New Delhi 05:50 ",
+    "to": "Amb  Andaura 11:05",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "5hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "AADR VandeBharat",
+    "number": "22448",
+    "from": "Amb  Andaura 13:00 ",
+    "to": "New Delhi 18:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "437 km",
+    "time": "5hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "ANVT VandeBharat",
+    "number": "22457",
+    "from": "Anand Vihar TRM 17:50 ",
+    "to": "Dehradun 22:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "302 km",
+    "time": "4hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "DDN VandeBharat",
+    "number": "22458",
+    "from": "Dehradun 07:00 ",
+    "to": "Anand Vihar TRM 11:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "302 km",
+    "time": "4hr 45min",
+    "days": "All Days"
+  },
+  {
+    "name": "KURJ VandeBharat",
+    "number": "22469",
+    "from": "KHAJURAHO 14:50 ",
+    "to": "H Nizamuddin 23:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "659 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "NZM VandeBharat",
+    "number": "22470",
+    "from": "H Nizamuddin 06:00 ",
+    "to": "KHAJURAHO 14:20",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "659 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "NDLS VandeBharat",
+    "number": "22477",
+    "from": "New Delhi 15:00 ",
+    "to": "Shri Mata Vaishno Devi Katra 23:15",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "655 km",
+    "time": "8hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "SVDK VandeBharat",
+    "number": "22478",
+    "from": "Shri Mata Vaishno Devi Katra 05:50 ",
+    "to": "New Delhi 14:00",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "655 km",
+    "time": "8hr 10min",
+    "days": "All Days"
+  },
+  {
+    "name": "DLI VandeBharat",
+    "number": "22487",
+    "from": "Old Delhi 15:15 ",
+    "to": "Amritsar Jn 20:45",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "447 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "ASR VandeBharat",
+    "number": "22488",
+    "from": "Amritsar Jn 08:20 ",
+    "to": "Old Delhi 13:50",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "447 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "LJN VandeBharat",
+    "number": "22545",
+    "from": "Lucknow Ne 05:15 ",
+    "to": "Dehradun 13:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "545 km",
+    "time": "8hr 20min",
+    "days": "All Days"
+  },
+  {
+    "name": "DDN VandeBharat",
+    "number": "22546",
+    "from": "Dehradun 14:25 ",
+    "to": "Lucknow Ne 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "545 km",
+    "time": "8hr 15min",
+    "days": "All Days"
+  },
+  {
+    "name": "GKP VandeBharat",
+    "number": "22549",
+    "from": "Gorakhpur Jn 06:05 ",
+    "to": "Prayagraj Jn. 13:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "7hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "PRYJ VandeBharat",
+    "number": "22550",
+    "from": "Prayagraj Jn. 15:15 ",
+    "to": "Gorakhpur Jn 22:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "500 km",
+    "time": "7hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "HWH VandeBharat",
+    "number": "22895",
+    "from": "Howrah Jn 06:10 ",
+    "to": "Puri 12:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "502 km",
+    "time": "6hr 25min",
+    "days": "All Days"
+  },
+  {
+    "name": "PURI VandeBharat",
+    "number": "22896",
+    "from": "Puri 13:50 ",
+    "to": "Howrah Jn 20:30",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "502 km",
+    "time": "6hr 40min",
+    "days": "All Days"
+  },
+  {
+    "name": "ADI VandeBharat",
+    "number": "22925",
+    "from": "Ahmedabad Jn 18:10 ",
+    "to": "Okha 00:40",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "499 km",
+    "time": "6hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "OKHA VandeBharat",
+    "number": "22926",
+    "from": "Okha 03:40 ",
+    "to": "Ahmedabad Jn 10:10",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "499 km",
+    "time": "6hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "MMCT VandeBharat",
+    "number": "22961",
+    "from": "Mumbai Central 15:55 ",
+    "to": "Ahmedabad Jn 21:25",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "491 km",
+    "time": "5hr 30min",
+    "days": "All Days"
+  },
+  {
+    "name": "ADI VandeBharat",
+    "number": "22962",
+    "from": "Ahmedabad Jn 06:10 ",
+    "to": "Mumbai Central 11:35",
+    "fromIcon": "fa-city",
+    "toIcon": "fa-landmark",
+    "distance": "491 km",
+    "time": "5hr 25min",
+    "days": "All Days"
+  }
 
 ];
 
