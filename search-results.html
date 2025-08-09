@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Search Results</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Search Results</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-  <div class="w-full bg-black text-white py-2 px-4 text-sm text-left">
-  <a href="index.html" class="hover:underline hover:text-orange-400 transition-all duration-200">
-    ⬅ Back to Home
-  </a>
-</div>
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Train Search Results</h1>
 
-  <!-- Search Section -->
-  <section class="w-full px-4 py-10 bg-orange-600 text-center">
-    <h1 class="text-white text-3xl font-bold mb-4">Train Search Results</h1>
-    <div class="flex justify-center gap-4">
-      <input id="fromStation" list="stationList" placeholder="Departure Station"
-        class="px-4 py-2 rounded border-2 border-black" />
-      <input id="toStation" list="stationList" placeholder="Arrival Station"
-        class="px-4 py-2 rounded border-2 border-black" />
-      <datalist id="stationList"></datalist>
-      <button onclick="searchTrains()" class="bg-blue-700 text-white px-6 py-2 rounded">Search</button>
+    <div class="flex gap-4 mb-4">
+      <input list="stationList" id="fromStation" class="border px-3 py-2 rounded w-1/2" placeholder="From Station" />
+      <input list="stationList" id="toStation" class="border px-3 py-2 rounded w-1/2" placeholder="To Station" />
     </div>
-  </section>
 
-  <!-- Results Section -->
-  <section class="w-full px-4 py-10">
-    <table class="w-full bg-white text-sm" id="resultsTable">
-      <thead>
-        <tr class="bg-gray-200 text-center">
-          <th class="px-4 py-2">Train No</th>
-          <th class="px-4 py-2">Name</th>
-          <th class="px-4 py-2">From</th>
-          <th class="px-4 py-2">To</th>
+    <datalist id="stationList"></datalist>
+
+    <table class="table-auto w-full border bg-white shadow-md" id="resultsTable">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="px-4 py-2">Train Number</th>
+          <th class="px-4 py-2">Train Name</th>
+          <th class="px-4 py-2">Departure Station</th>
+          <th class="px-4 py-2">Arrival Station</th>
           <th class="px-4 py-2">Departure Time</th>
           <th class="px-4 py-2">Arrival Time</th>
           <th class="px-4 py-2">Journey Duration</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody class="text-center"></tbody>
     </table>
-  </section>
+  </div>
 
-  <!-- Working Script -->
+  <!-- Station Details Modal -->
+  <div id="stationDetailModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 w-11/12 md:w-5/6 max-h-[80vh] overflow-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-bold">Train Route Details</h3>
+        <button onclick="document.getElementById('stationDetailModal').classList.add('hidden')" class="text-red-600 text-xl">&times;</button>
+      </div>
+      <div id="stationDetailModalContent"></div>
+    </div>
+  </div>
+
   <script>
     let trainData = [];
 
@@ -52,7 +52,6 @@
       .then(data => {
         trainData = data;
 
-        // ✅ Populate station suggestions
         const stationSet = new Set();
         data.forEach(train => {
           stationSet.add(train["Departure Station"]);
@@ -66,24 +65,17 @@
           datalist.appendChild(option);
         });
 
-        // ✅ Pre-fill inputs from localStorage
         const from = localStorage.getItem("fromStation") || "";
         const to = localStorage.getItem("toStation") || "";
         document.getElementById("fromStation").value = from;
         document.getElementById("toStation").value = to;
 
-        // ✅ Run initial search
         searchTrains();
       });
 
     function searchTrains() {
       const from = document.getElementById("fromStation").value.trim().toLowerCase();
       const to = document.getElementById("toStation").value.trim().toLowerCase();
-
-      // ✅ Save to localStorage
-      localStorage.setItem("fromStation", from);
-      localStorage.setItem("toStation", to);
-
       const tbody = document.querySelector("#resultsTable tbody");
       tbody.innerHTML = "";
 
@@ -99,9 +91,10 @@
       }
 
       filtered.forEach(train => {
+        const trainNum = train["Train Number"];
         tbody.innerHTML += `
           <tr class="text-center border-b">
-            <td class="px-4 py-2">${train["Train Number"]}</td>
+            <td class="px-4 py-2 text-blue-600 underline cursor-pointer" onclick="showTrainDetails('${trainNum}')">${trainNum}</td>
             <td class="px-4 py-2">${train["Train Name"]}</td>
             <td class="px-4 py-2">${train["Departure Station"]}</td>
             <td class="px-4 py-2">${train["Arrival Station"]}</td>
@@ -112,7 +105,52 @@
         `;
       });
     }
-  </script>
 
+    function showTrainDetails(trainNumber) {
+  console.log("Clicked Train Number:", trainNumber); // Debug log
+
+  fetch("train_station_list.json")
+    .then(res => res.json())
+    .then(data => {
+      const stations = data.filter(station => station["Train Number"].toString().trim() === trainNumber.trim());
+
+      if (stations.length === 0) {
+        document.getElementById("stationDetailModalContent").innerHTML = "<p>No data found for this train.</p>";
+        document.getElementById("stationDetailModal").classList.remove("hidden");
+        return;
+      }
+
+      const columns = Object.keys(stations[0]);
+      let content = `<h2 class="text-xl font-bold mb-4">Train ${trainNumber} - Station Details</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full table-auto text-sm border-collapse border border-gray-300">
+            <thead><tr>`;
+
+      columns.forEach(col => {
+        content += `<th class="border border-gray-300 bg-gray-100 px-4 py-2">${col}</th>`;
+      });
+
+      content += `</tr></thead><tbody>`;
+
+      stations.forEach(station => {
+        content += `<tr>`;
+        columns.forEach(col => {
+          content += `<td class="border border-gray-300 px-4 py-2">${station[col]}</td>`;
+        });
+        content += `</tr>`;
+      });
+
+      content += `</tbody></table></div>`;
+
+      document.getElementById("stationDetailModalContent").innerHTML = content;
+      document.getElementById("stationDetailModal").classList.remove("hidden");
+    })
+    .catch(error => {
+      console.error("Error fetching station list:", error);
+      alert("Failed to load train details.");
+    });
+}
+
+  </script>
 </body>
 </html>
