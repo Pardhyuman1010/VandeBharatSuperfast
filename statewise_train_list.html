@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vande Bharat Trains</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #eef1f5; margin: 0; padding: 20px; }
+    h1 { text-align: center; color: #222; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #007bff; color: white; }
+    .stats { text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 18px; }
+    .train-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .train-card { background: linear-gradient(135deg, #ffffff, #e6f0ff); padding: 20px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.2s ease-in-out, box-shadow 0.2s; }
+    .train-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+    .train-card h3 { margin: 0 0 10px; color: #007bff; font-size: 20px; }
+    .train-card p { margin: 5px 0; color: #444; font-size: 14px; }
+    .filter-container { text-align: center; margin-bottom: 30px; }
+    select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+
+<h1>Vande Bharat Trains</h1>
+
+<div class="filter-container">
+    <label for="stateFilter"><strong>Filter by State:</strong></label>
+    <select id="stateFilter">
+        <option value="all">All States</option>
+    </select>
+</div>
+
+<div class="stats" id="trainCount">Loading...</div>
+
+<div class="train-list" id="trainList"></div>
+
+<h2 style="text-align:center; margin-top:40px;">State Metrics</h2>
+<table id="stateMetrics">
+    <tr><th>State</th><th>Number of Vande Bharat Trains</th></tr>
+</table>
+
+<script>
+async function loadData() {
+    try {
+        const response = await fetch('vande_bharat_trains.json');
+        const trains = await response.json();
+
+        // Sort trains by name
+        trains.sort((a, b) => a.name.localeCompare(b.name));
+
+        // Build state counts
+        const stateCounts = {};
+        trains.forEach(t => {
+            let states = Array.isArray(t.state) ? t.state : [t.state];
+            states.forEach(s => {
+                s = s.trim();
+                stateCounts[s] = (stateCounts[s] || 0) + 1;
+            });
+        });
+
+        // Populate filter dropdown
+        const stateFilter = document.getElementById('stateFilter');
+        Object.keys(stateCounts).sort((a, b) => stateCounts[b] - stateCounts[a]).forEach(state => {
+            const opt = document.createElement('option');
+            opt.value = state;
+            opt.textContent = state;
+            stateFilter.appendChild(opt);
+        });
+
+        // Populate state metrics table
+        const metricsTable = document.getElementById('stateMetrics');
+        Object.entries(stateCounts).sort((a, b) => b[1] - a[1]).forEach(([state, count]) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${state}</td><td>${count}</td>`;
+            metricsTable.appendChild(row);
+        });
+
+        // Function to render trains
+        function renderTrains(filterState) {
+            const list = document.getElementById('trainList');
+            list.innerHTML = '';
+            let visibleCount = 0;
+            trains.forEach(t => {
+                let states = Array.isArray(t.state) ? t.state : [t.state];
+                if (filterState === 'all' || states.map(s => s.toLowerCase()).includes(filterState.toLowerCase())) {
+                    const card = document.createElement('div');
+                    card.className = 'train-card';
+                    card.setAttribute('data-state', t.state);
+                    card.innerHTML = `
+                        <h3>${t.name}</h3>
+                        <p><strong>Number:</strong> ${t.number}</p>
+                        <p><strong>From:</strong> ${t.from}</p>
+                        <p><strong>To:</strong> ${t.to}</p>
+                        <p><strong>Distance:</strong> ${t.distance || '-'}</p>
+                        <p><strong>Time:</strong> ${t.time || '-'}</p>
+                        <p><strong>Days:</strong> ${t.days || '-'}</p>
+                    `;
+                    list.appendChild(card);
+                    visibleCount++;
+                }
+            });
+            document.getElementById('trainCount').textContent =
+                (filterState === 'all' ? 'Total Vande Bharat Trains: ' : 'Number of Vande Bharat Trains in ' + filterState + ': ') + visibleCount;
+        }
+
+        // Initial render
+        renderTrains('all');
+
+        // Handle filter change
+        stateFilter.addEventListener('change', () => {
+            renderTrains(stateFilter.value);
+        });
+
+    } catch (err) {
+        console.error('Error loading JSON:', err);
+        document.getElementById('trainCount').textContent = 'Failed to load train data.';
+    }
+}
+
+loadData();
+</script>
+
+</body>
+</html>

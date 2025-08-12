@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Train List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f8fa;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .train-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+    }
+    .train-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+    .train-card:hover {
+        transform: translateY(-4px);
+    }
+    .train-header {
+        background: linear-gradient(90deg, #4e73df, #1cc88a);
+        color: #fff;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .train-body {
+        padding: 15px;
+    }
+    .train-info {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #555;
+    }
+    .stop-list {
+        margin-top: 10px;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+    .stop {
+        padding: 8px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Train List</h1>
+<div class="train-container" id="trainList"></div>
+
+<script>
+fetch('train_station_list.json')
+    .then(response => response.json())
+    .then(data => {
+        const grouped = {};
+        data.forEach(item => {
+            if(!grouped[item["Train Number"]]) grouped[item["Train Number"]] = [];
+            grouped[item["Train Number"]].push(item);
+        });
+
+        const container = document.getElementById('trainList');
+        Object.keys(grouped).forEach(trainNo => {
+            const stops = grouped[trainNo];
+            const firstStop = stops[0];
+            const lastStop = stops[stops.length - 1];
+
+            const card = document.createElement('div');
+            card.className = 'train-card';
+            card.innerHTML = `
+                <div class="train-header">Train No. ${trainNo}</div>
+                <div class="train-body">
+                    <div class="train-info"><strong>From:</strong> ${stops.find(s => s["Arrival Time"] === "starts")?.["Departure Station Name"] || firstStop["Departure Station Name"]}</div>
+                    <div class="train-info"><strong>To:</strong> ${stops.find(s => s["Departure Time"] === "ends")?.["Departure Station Name"] || lastStop["Departure Station Name"]}</div>
+                    <div class="train-info"><strong>Stops:</strong></div>
+                    <div class="stop-list">
+                        ${stops.map(s => `<div class="stop">${s["Departure Station Name"]} (${s["Departure Time"]})</div>`).join('')}
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    });
+</script>
+
+</body>
+</html>

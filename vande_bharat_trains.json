@@ -8,7 +8,8 @@
     "toIcon": "fa-landmark",
     "distance": "1000 km",
     "time": "11hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar", "Uttar Pradesh", "New Delhi"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -19,7 +20,8 @@
     "toIcon": "fa-landmark",
     "distance": "1000 km",
     "time": "11hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar", "Uttar Pradesh", "New Delhi"]
   },
   {
     "name": "HWH VandeBharat",
@@ -30,7 +32,8 @@
     "toIcon": "fa-landmark",
     "distance": "561 km",
     "time": "7hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "West Bengal"
   },
   {
     "name": "NJP VandeBharat",
@@ -41,7 +44,8 @@
     "toIcon": "fa-landmark",
     "distance": "561 km",
     "time": "7hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "West Bengal"
   },
   {
     "name": "HWH VandeBharat",
@@ -52,7 +56,8 @@
     "toIcon": "fa-landmark",
     "distance": "502 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Odisha"]
   },
   {
     "name": "PURI VandeBharat",
@@ -63,7 +68,8 @@
     "toIcon": "fa-landmark",
     "distance": "502 km",
     "time": "6hr 40min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Odisha"]
   },
   {
     "name": "JU VandeBharat",
@@ -74,7 +80,8 @@
     "toIcon": "fa-landmark",
     "distance": "449 km",
     "time": "6hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Rajasthan","Gujarat"]
   },
   {
     "name": "SBIB VandeBharat",
@@ -85,7 +92,8 @@
     "toIcon": "fa-landmark",
     "distance": "449 km",
     "time": "6hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Rajasthan","Gujarat"]
   },
   {
     "name": "RKMP VandeBharat",
@@ -96,7 +104,8 @@
     "toIcon": "fa-landmark",
     "distance": "700 km",
     "time": "7hr 36min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Madhya Pradesh","New Delhi"]
   },
   {
     "name": "NZM VandeBharat",
@@ -107,7 +116,8 @@
     "toIcon": "fa-landmark",
     "distance": "700 km",
     "time": "7hr 36min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Madhya Pradesh","New Delhi"]
   },
   {
     "name": "RKMP VandeBharat",
@@ -118,7 +128,8 @@
     "toIcon": "fa-landmark",
     "distance": "569 km",
     "time": "8hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Madhya Pradesh"
   },
   {
     "name": "REWA VandeBharat",
@@ -129,7 +140,8 @@
     "toIcon": "fa-landmark",
     "distance": "576 km",
     "time": "8hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Madhya Pradesh"
   },
   {
     "name": "MAS VandeBharat",
@@ -140,7 +152,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "6hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Tamil Nadu","Karnataka"]
   },
   {
     "name": "MYS VandeBharat",
@@ -151,7 +164,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "6hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Tamil Nadu","Karnataka"]
   },
   {
     "name": "KGQ VandeBharat",
@@ -162,7 +176,8 @@
     "toIcon": "fa-landmark",
     "distance": "588 km",
     "time": "8hr 10min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Kerala"
   },
   {
     "name": "TVC VandeBharat",
@@ -173,7 +188,8 @@
     "toIcon": "fa-landmark",
     "distance": "588 km",
     "time": "8hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Kerala"
   },
   {
     "name": "BNC VandeBharat",
@@ -184,7 +200,8 @@
     "toIcon": "fa-landmark",
     "distance": "377 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Tamil Nadu"]
   },
   {
     "name": "CBE VandeBharat",
@@ -195,7 +212,8 @@
     "toIcon": "fa-landmark",
     "distance": "377 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Tamil Nadu"]
   },
   {
     "name": "MAS VandeBharat",
@@ -206,7 +224,8 @@
     "toIcon": "fa-landmark",
     "distance": "497 km",
     "time": "6hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Tamil Nadu"
   },
   {
     "name": "CBE VandeBharat",
@@ -217,7 +236,8 @@
     "toIcon": "fa-landmark",
     "distance": "497 km",
     "time": "5hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Tamil Nadu"
   },
   {
     "name": "MAO VandeBharat",
@@ -228,7 +248,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "4hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Goa"]
   },
   {
     "name": "MAQ VandeBharat",
@@ -239,7 +260,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "4hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Goa"]
   },
   {
     "name": "SBC VandeBharat",
@@ -250,7 +272,8 @@
     "toIcon": "fa-landmark",
     "distance": "490 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Karnataka"
   },
   {
     "name": "DWR VandeBharat",
@@ -261,7 +284,8 @@
     "toIcon": "fa-landmark",
     "distance": "490 km",
     "time": "6hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Karnataka"
   },
   {
     "name": "MYS VandeBharat",
@@ -272,7 +296,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Tamil Nadu"]
   },
   {
     "name": "MAS VandeBharat",
@@ -283,7 +308,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "6hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Karnataka","Tamil Nadu"]
   },
   {
     "name": "MS VandeBharat",
@@ -294,7 +320,8 @@
     "toIcon": "fa-landmark",
     "distance": "653 km",
     "time": "7hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Tamil Nadu"
   },
   {
     "name": "TEN VandeBharat",
@@ -305,7 +332,8 @@
     "toIcon": "fa-landmark",
     "distance": "653 km",
     "time": "7hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Tamil Nadu"
   },
   {
     "name": "MAS VandeBharat",
@@ -316,7 +344,8 @@
     "toIcon": "fa-landmark",
     "distance": "517 km",
     "time": "6hr 40min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Tamil Nadu","Andhra Pradesh"]
   },
   {
     "name": "BZA VandeBharat",
@@ -327,7 +356,8 @@
     "toIcon": "fa-landmark",
     "distance": "517 km",
     "time": "6hr 40min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Tamil Nadu","Andhra Pradesh"]
   },
   {
     "name": "SC VandeBharat",
@@ -338,7 +368,8 @@
     "toIcon": "fa-landmark",
     "distance": "661 km",
     "time": "8hr 19min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Andhra Pradesh"]
   },
   {
     "name": "TPTY VandeBharat",
@@ -349,7 +380,8 @@
     "toIcon": "fa-landmark",
     "distance": "661 km",
     "time": "8hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Andhra Pradesh"]
   },
   {
     "name": "KCG VandeBharat",
@@ -360,7 +392,8 @@
     "toIcon": "fa-landmark",
     "distance": "610 km",
     "time": "8hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Karnataka"]
   },
   {
     "name": "YPR VandeBharat",
@@ -371,7 +404,8 @@
     "toIcon": "fa-landmark",
     "distance": "610 km",
     "time": "8hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Karnataka"]
   },
   {
     "name": "J VandeBharat",
@@ -382,7 +416,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "6hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "CSMT VandeBharat",
@@ -393,7 +428,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "7hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "SC VandeBharat",
@@ -404,7 +440,8 @@
     "toIcon": "fa-landmark",
     "distance": "699 km",
     "time": "8hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Andhra Pradesh"]
   },
   {
     "name": "VSKP VandeBharat",
@@ -415,7 +452,8 @@
     "toIcon": "fa-landmark",
     "distance": "699 km",
     "time": "8hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Telangana","Andhra Pradesh"]
   },
   {
     "name": "BSP VandeBharat",
@@ -426,7 +464,8 @@
     "toIcon": "fa-landmark",
     "distance": "413 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Chhattisgarh","Maharashtra"]
   },
   {
     "name": "NGP VandeBharat",
@@ -437,7 +476,9 @@
     "toIcon": "fa-landmark",
     "distance": "413 km",
     "time": "5hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Chhattisgarh","Maharashtra"]
+
   },
   {
     "name": "VSKP VandeBharat",
@@ -448,7 +489,8 @@
     "toIcon": "fa-landmark",
     "distance": "699 km",
     "time": "8hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Andhra Pradesh","Telangana"]
   },
   {
     "name": "SC VandeBharat",
@@ -459,7 +501,8 @@
     "toIcon": "fa-landmark",
     "distance": "699 km",
     "time": "8hr 31min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Andhra Pradesh","Telangana"]
   },
   {
     "name": "ROU VandeBharat",
@@ -470,7 +513,8 @@
     "toIcon": "fa-landmark",
     "distance": "505 km",
     "time": "7hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Odisha"
   },
   {
     "name": "PURI VandeBharat",
@@ -481,7 +525,8 @@
     "toIcon": "fa-landmark",
     "distance": "504 km",
     "time": "7hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Odisha"
   },
   {
     "name": "BBS VandeBharat",
@@ -492,7 +537,8 @@
     "toIcon": "fa-landmark",
     "distance": "443 km",
     "time": "5hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Odisha","Andhra Pradesh"]
   },
   {
     "name": "VSKP VandeBharat",
@@ -503,7 +549,8 @@
     "toIcon": "fa-landmark",
     "distance": "443 km",
     "time": "6hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Odisha","Andhra Pradesh"]
   },
   {
     "name": "RNC VandeBharat",
@@ -514,7 +561,8 @@
     "toIcon": "fa-landmark",
     "distance": "536 km",
     "time": "7hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Jharkhand","Bihar","Uttar Pradesh"]
   },
   {
     "name": "BSB VandeBharat",
@@ -525,7 +573,8 @@
     "toIcon": "fa-landmark",
     "distance": "536 km",
     "time": "7hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Jharkhand","Bihar","Uttar Pradesh"]
   },
   {
     "name": "HWH VandeBharat",
@@ -536,7 +585,8 @@
     "toIcon": "fa-landmark",
     "distance": "462 km",
     "time": "7hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Jharkhand"]
   },
   {
     "name": "RNC VandeBharat",
@@ -547,7 +597,8 @@
     "toIcon": "fa-landmark",
     "distance": "462 km",
     "time": "7hr 10min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Jharkhand"]
   },
   {
     "name": "MMCT VandeBharat",
@@ -558,7 +609,8 @@
     "toIcon": "fa-landmark",
     "distance": "520 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Gujarat"]
   },
   {
     "name": "GNC VandeBharat",
@@ -569,7 +621,8 @@
     "toIcon": "fa-landmark",
     "distance": "520 km",
     "time": "6hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Gujarat"]
   },
   {
     "name": "INDB VandeBharat",
@@ -580,7 +633,8 @@
     "toIcon": "fa-landmark",
     "distance": "635 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Madhya Pradesh","Maharashtra"]
   },
   {
     "name": "NGP VandeBharat",
@@ -591,7 +645,8 @@
     "toIcon": "fa-landmark",
     "distance": "642 km",
     "time": "8hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Madhya Pradesh","Maharashtra"]
   },
   {
     "name": "AII VandeBharat",
@@ -602,7 +657,8 @@
     "toIcon": "fa-landmark",
     "distance": "700 km",
     "time": "8hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Rajasthan","New Delhi","Haryana","Chandigarh"]
   },
   {
     "name": "CDG VandeBharat",
@@ -613,7 +669,8 @@
     "toIcon": "fa-landmark",
     "distance": "700 km",
     "time": "8hr 40min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Rajasthan","New Delhi","Haryana","Chandigarh"]
   },
   {
     "name": "UDZ VandeBharat",
@@ -624,7 +681,8 @@
     "toIcon": "fa-landmark",
     "distance": "435 km",
     "time": "6hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Rajasthan"
   },
   {
     "name": "JP VandeBharat",
@@ -635,7 +693,8 @@
     "toIcon": "fa-landmark",
     "distance": "435 km",
     "time": "6hr 23min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Rajasthan"
   },
   {
     "name": "CSMT VandeBharat",
@@ -646,7 +705,8 @@
     "toIcon": "fa-landmark",
     "distance": "343 km",
     "time": "5hr 10min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "SNSI VandeBharat",
@@ -657,7 +717,8 @@
     "toIcon": "fa-landmark",
     "distance": "334 km",
     "time": "4hr 43min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "CSMT VandeBharat",
@@ -668,7 +729,8 @@
     "toIcon": "fa-landmark",
     "distance": "455 km",
     "time": "6hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "SUR VandeBharat",
@@ -679,7 +741,8 @@
     "toIcon": "fa-landmark",
     "distance": "455 km",
     "time": "6hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Maharashtra"
   },
   {
     "name": "NJP VandeBharat",
@@ -690,7 +753,8 @@
     "toIcon": "fa-landmark",
     "distance": "409 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "GHY VandeBharat",
@@ -701,7 +765,8 @@
     "toIcon": "fa-landmark",
     "distance": "409 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "DR VandeBharat",
@@ -712,7 +777,8 @@
     "toIcon": "fa-landmark",
     "distance": "765 km",
     "time": "7hr 36min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Goa"]
   },
   {
     "name": "MAO VandeBharat",
@@ -723,7 +789,8 @@
     "toIcon": "fa-landmark",
     "distance": "765 km",
     "time": "7hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Goa"]
   },
   {
     "name": "KLBG VandeBharat",
@@ -734,7 +801,8 @@
     "toIcon": "fa-landmark",
     "distance": "547 km",
     "time": "8hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Karnataka"
   },
   {
     "name": "SMVB VandeBharat",
@@ -745,7 +813,8 @@
     "toIcon": "fa-landmark",
     "distance": "547 km",
     "time": "8hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Karnataka"
   },
   {
     "name": "NJP VandeBharat",
@@ -756,7 +825,8 @@
     "toIcon": "fa-landmark",
     "distance": "471 km",
     "time": "6hr 55min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "PNBE VandeBharat",
@@ -767,7 +837,8 @@
     "toIcon": "fa-landmark",
     "distance": "471 km",
     "time": "7hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "HWH VandeBharat",
@@ -778,7 +849,8 @@
     "toIcon": "fa-landmark",
     "distance": "561 km",
     "time": "7hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "NJP VandeBharat",
@@ -789,7 +861,8 @@
     "toIcon": "fa-landmark",
     "distance": "561 km",
     "time": "7hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Assam"]
   },
   {
     "name": "PNBE VandeBharat",
@@ -800,7 +873,8 @@
     "toIcon": "fa-landmark",
     "distance": "544 km",
     "time": "8hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar","Uttar Pradesh"]
   },
   {
     "name": "GTNR VandeBharat",
@@ -811,7 +885,8 @@
     "toIcon": "fa-landmark",
     "distance": "544 km",
     "time": "8hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar","Uttar Pradesh"]
   },
   {
     "name": "HWH VandeBharat",
@@ -822,7 +897,8 @@
     "toIcon": "fa-landmark",
     "distance": "532 km",
     "time": "6hr 50min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Bihar"]
   },
   {
     "name": "PNBE VandeBharat",
@@ -833,7 +909,8 @@
     "toIcon": "fa-landmark",
     "distance": "532 km",
     "time": "6hr 35min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Bihar"]
   },
   {
     "name": "PNBE VandeBharat",
@@ -844,7 +921,8 @@
     "toIcon": "fa-landmark",
     "distance": "379 km",
     "time": "6hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar","Jharkhand"]
   },
   {
     "name": "RNC VandeBharat",
@@ -855,7 +933,8 @@
     "toIcon": "fa-landmark",
     "distance": "379 km",
     "time": "5hr 55min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Bihar","Jharkhand"]
   },
   {
     "name": "BSB VandeBharat",
@@ -866,7 +945,8 @@
     "toIcon": "fa-landmark",
     "distance": "760 km",
     "time": "8hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -877,7 +957,8 @@
     "toIcon": "fa-landmark",
     "distance": "760 km",
     "time": "8hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "AYC VandeBharat",
@@ -888,7 +969,8 @@
     "toIcon": "fa-landmark",
     "distance": "629 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "ANVT VandeBharat",
@@ -899,7 +981,8 @@
     "toIcon": "fa-landmark",
     "distance": "629 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "BSB VandeBharat",
@@ -910,7 +993,8 @@
     "toIcon": "fa-landmark",
     "distance": "771 km",
     "time": "8hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -921,7 +1005,8 @@
     "toIcon": "fa-landmark",
     "distance": "771 km",
     "time": "8hr",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","New Delhi"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -932,7 +1017,8 @@
     "toIcon": "fa-landmark",
     "distance": "655 km",
     "time": "8hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Jammu & Kashmir","Haryana","Punjab"]
   },
   {
     "name": "SVDK VandeBharat",
@@ -943,7 +1029,8 @@
     "toIcon": "fa-landmark",
     "distance": "655 km",
     "time": "8hr 5min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Jammu & Kashmir","Haryana","Punjab"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -954,7 +1041,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "5hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Himachal Pradesh"]
   },
   {
     "name": "AADR VandeBharat",
@@ -965,7 +1053,8 @@
     "toIcon": "fa-landmark",
     "distance": "437 km",
     "time": "5hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Himachal Pradesh"]
   },
   {
     "name": "ANVT VandeBharat",
@@ -976,7 +1065,8 @@
     "toIcon": "fa-landmark",
     "distance": "302 km",
     "time": "4hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Uttarakhand"]
   },
   {
     "name": "DDN VandeBharat",
@@ -987,7 +1077,8 @@
     "toIcon": "fa-landmark",
     "distance": "302 km",
     "time": "4hr 45min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Uttarakhand"]
   },
   {
     "name": "KURJ VandeBharat",
@@ -998,7 +1089,8 @@
     "toIcon": "fa-landmark",
     "distance": "659 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Madhya Pradesh"]
   },
   {
     "name": "NZM VandeBharat",
@@ -1009,7 +1101,8 @@
     "toIcon": "fa-landmark",
     "distance": "659 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Madhya Pradesh"]
   },
   {
     "name": "NDLS VandeBharat",
@@ -1020,7 +1113,8 @@
     "toIcon": "fa-landmark",
     "distance": "655 km",
     "time": "8hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Jammu & Kashmir","Haryana","Punjab"]
   },
   {
     "name": "SVDK VandeBharat",
@@ -1031,7 +1125,8 @@
     "toIcon": "fa-landmark",
     "distance": "655 km",
     "time": "8hr 10min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Jammu & Kashmir","Haryana","Punjab"]
   },
   {
     "name": "DLI VandeBharat",
@@ -1042,7 +1137,8 @@
     "toIcon": "fa-landmark",
     "distance": "447 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Haryana","Punjab"]
   },
   {
     "name": "ASR VandeBharat",
@@ -1053,7 +1149,8 @@
     "toIcon": "fa-landmark",
     "distance": "447 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["New Delhi","Haryana","Punjab"]
   },
   {
     "name": "LJN VandeBharat",
@@ -1064,7 +1161,8 @@
     "toIcon": "fa-landmark",
     "distance": "545 km",
     "time": "8hr 20min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","Uttarakhand"]
   },
   {
     "name": "DDN VandeBharat",
@@ -1075,7 +1173,8 @@
     "toIcon": "fa-landmark",
     "distance": "545 km",
     "time": "8hr 15min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Uttar Pradesh","Uttarakhand"]
   },
   {
     "name": "GKP VandeBharat",
@@ -1086,7 +1185,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "7hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Uttar Pradesh"
   },
   {
     "name": "PRYJ VandeBharat",
@@ -1097,7 +1197,8 @@
     "toIcon": "fa-landmark",
     "distance": "500 km",
     "time": "7hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Uttar Pradesh"
   },
   {
     "name": "HWH VandeBharat",
@@ -1108,7 +1209,8 @@
     "toIcon": "fa-landmark",
     "distance": "502 km",
     "time": "6hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Odisha"]
   },
   {
     "name": "PURI VandeBharat",
@@ -1119,7 +1221,8 @@
     "toIcon": "fa-landmark",
     "distance": "502 km",
     "time": "6hr 40min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["West Bengal","Odisha"]
   },
   {
     "name": "ADI VandeBharat",
@@ -1130,7 +1233,8 @@
     "toIcon": "fa-landmark",
     "distance": "499 km",
     "time": "6hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Gujarat"
   },
   {
     "name": "OKHA VandeBharat",
@@ -1141,7 +1245,8 @@
     "toIcon": "fa-landmark",
     "distance": "499 km",
     "time": "6hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": "Gujarat"
   },
   {
     "name": "MMCT VandeBharat",
@@ -1152,7 +1257,8 @@
     "toIcon": "fa-landmark",
     "distance": "491 km",
     "time": "5hr 30min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Gujarat"]
   },
   {
     "name": "ADI VandeBharat",
@@ -1163,6 +1269,7 @@
     "toIcon": "fa-landmark",
     "distance": "491 km",
     "time": "5hr 25min",
-    "days": "All Days"
+    "days": "All Days",
+    "state": ["Maharashtra","Gujarat"]
   }
 ]
