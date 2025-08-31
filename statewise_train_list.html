@@ -1,30 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://vandebharatsuperfast.com/statewise_train_list.html">
 <title>Vande Bharat Trains</title>
 <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #eef1f5; margin: 0; padding: 20px; }
-    h1 { text-align: center; color: #222; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 8px; overflow: hidden; }
-    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-    th { background-color: #007bff; color: white; }
-    .stats { text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 18px; }
-    .train-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-    .train-card { background: linear-gradient(135deg, #ffffff, #e6f0ff); padding: 20px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.2s ease-in-out, box-shadow 0.2s; }
-    .train-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
-    .train-card h3 { margin: 0 0 10px; color: #007bff; font-size: 20px; }
-    .train-card p { margin: 5px 0; color: #444; font-size: 14px; }
-    .filter-container { text-align: center; margin-bottom: 30px; }
-    select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #121212;
+        color: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #00d4ff;
+        text-shadow: 0 0 10px #00d4ff;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    th, td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #00d4ff;
+        color: #121212;
+    }
+    td {
+        color: #ddd;
+    }
+    .stats {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #00ff99;
+        text-shadow: 0 0 10px #00ff99;
+    }
+    .train-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .train-card {
+        background: linear-gradient(135deg, #1f1f1f, #292929);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .train-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+    }
+    .train-card h3 {
+        margin: 0 0 10px;
+        color: #00d4ff;
+        font-size: 20px;
+    }
+    .train-card p {
+        margin: 5px 0;
+        color: #bbb;
+        font-size: 14px;
+    }
+    .filter-container {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    label {
+        color: #00ff99;
+    }
+    select {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #00d4ff;
+        background: #1e1e1e;
+        color: #e0e0e0;
+    }
+    option {
+        background: #121212;
+        color: #e0e0e0;
+    }
 </style>
 </head>
 <body>
 
-<h1>Vande Bharat Trains</h1>
+<h1>🚄 Vande Bharat Trains</h1>
 
 <div class="filter-container">
     <label for="stateFilter"><strong>Filter by State:</strong></label>
@@ -37,7 +106,7 @@
 
 <div class="train-list" id="trainList"></div>
 
-<h2 style="text-align:center; margin-top:40px;">State Metrics</h2>
+<h2 style="text-align:center; margin-top:40px; color:#00d4ff;">📊 State Metrics</h2>
 <table id="stateMetrics">
     <tr><th>State</th><th>Number of Vande Bharat Trains</th></tr>
 </table>
@@ -48,10 +117,8 @@ async function loadData() {
         const response = await fetch('vande_bharat_trains.json');
         const trains = await response.json();
 
-        // Sort trains by name
         trains.sort((a, b) => a.name.localeCompare(b.name));
 
-        // Build state counts
         const stateCounts = {};
         trains.forEach(t => {
             let states = Array.isArray(t.state) ? t.state : [t.state];
@@ -61,7 +128,6 @@ async function loadData() {
             });
         });
 
-        // Populate filter dropdown
         const stateFilter = document.getElementById('stateFilter');
         Object.keys(stateCounts).sort((a, b) => stateCounts[b] - stateCounts[a]).forEach(state => {
             const opt = document.createElement('option');
@@ -70,7 +136,6 @@ async function loadData() {
             stateFilter.appendChild(opt);
         });
 
-        // Populate state metrics table
         const metricsTable = document.getElementById('stateMetrics');
         Object.entries(stateCounts).sort((a, b) => b[1] - a[1]).forEach(([state, count]) => {
             const row = document.createElement('tr');
@@ -78,7 +143,6 @@ async function loadData() {
             metricsTable.appendChild(row);
         });
 
-        // Function to render trains
         function renderTrains(filterState) {
             const list = document.getElementById('trainList');
             list.innerHTML = '';
@@ -106,10 +170,8 @@ async function loadData() {
                 (filterState === 'all' ? 'Total Vande Bharat Trains: ' : 'Number of Vande Bharat Trains in ' + filterState + ': ') + visibleCount;
         }
 
-        // Initial render
         renderTrains('all');
 
-        // Handle filter change
         stateFilter.addEventListener('change', () => {
             renderTrains(stateFilter.value);
         });

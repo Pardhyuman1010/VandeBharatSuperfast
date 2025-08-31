@@ -3,19 +3,25 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="canonical" href="https://vandebharatsuperfast.com/all_train_list.html">
-<title>Train List</title>
+<title>🚄 Train List</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f7f8fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #0d1117;
+        color: #e6edf3;
         margin: 0;
         padding: 20px;
     }
     h1 {
         text-align: center;
         margin-bottom: 30px;
-        color: #333;
+        color: #58a6ff;
+        text-shadow: 0 0 12px #58a6ff;
+        animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 12px #58a6ff; }
+        to { text-shadow: 0 0 24px #1f6feb; }
     }
     .train-container {
         display: grid;
@@ -23,21 +29,33 @@
         gap: 20px;
     }
     .train-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        background: linear-gradient(145deg, #161b22, #1f242d);
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
         overflow: hidden;
-        transition: transform 0.2s ease;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s forwards;
+    }
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     .train-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 0 25px rgba(88, 166, 255, 0.6);
     }
     .train-header {
-        background: linear-gradient(90deg, #4e73df, #1cc88a);
+        background: linear-gradient(90deg, #58a6ff, #1f6feb);
         color: #fff;
         padding: 15px;
         font-size: 18px;
         font-weight: bold;
+        text-align: center;
+        letter-spacing: 1px;
     }
     .train-body {
         padding: 15px;
@@ -45,25 +63,34 @@
     .train-info {
         font-size: 14px;
         margin-bottom: 8px;
-        color: #555;
+        color: #c9d1d9;
+    }
+    .train-info strong {
+        color: #58a6ff;
     }
     .stop-list {
         margin-top: 10px;
-        border-top: 1px solid #eee;
+        border-top: 1px solid #30363d;
         padding-top: 10px;
     }
     .stop {
         padding: 8px;
-        background: #f9f9f9;
+        background: #21262d;
         border-radius: 6px;
         margin-bottom: 8px;
         font-size: 13px;
+        color: #adbac7;
+        transition: background 0.3s, transform 0.2s;
+    }
+    .stop:hover {
+        background: #30363d;
+        transform: scale(1.05);
     }
 </style>
 </head>
 <body>
 
-<h1>Train List</h1>
+<h1>🚄 Train List</h1>
 <div class="train-container" id="trainList"></div>
 
 <script>
@@ -77,6 +104,7 @@ fetch('train_station_list.json')
         });
 
         const container = document.getElementById('trainList');
+        let delay = 0;
         Object.keys(grouped).forEach(trainNo => {
             const stops = grouped[trainNo];
             const firstStop = stops[0];
@@ -84,6 +112,9 @@ fetch('train_station_list.json')
 
             const card = document.createElement('div');
             card.className = 'train-card';
+            card.style.animationDelay = `${delay}s`;
+            delay += 0.1;
+
             card.innerHTML = `
                 <div class="train-header">Train No. ${trainNo}</div>
                 <div class="train-body">
