@@ -335,18 +335,34 @@ border: 2px solid #dc2626;
 </div>
 </nav>
 <!-- Search Section -->
-<section class="w-full px-0 pt-4 pb-4 bg-orange-600 text-center">
-
-
-<!-- Horizontal Search Row -->
-<div class="flex flex-col md:flex-row gap-4 mb-6 justify-center">
-<input class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" id="fromStation" list="stationList" placeholder="Departure Station" type="text"/>
-<input class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-black focus:ring-2 focus:ring-black focus:border-black shadow-100" id="toStation" list="stationList" placeholder="Arrival Station" type="text"/>
-<datalist id="stationList"></datalist>
-<button class="w-full md:w-auto px-6 py-3 bg-blue-800 hover:from-blue-700 hover:to-orange-600 text-white font-medium rounded-lg shadow-md transition-all duration-300" onclick="goToSearchResults()">
-<i class="fas fa-search mr-2"></i>Search
+<section class="w-full px-0 pt-6 pb-6 bg-blue-100 text-center">
+  <h2 class="text-2xl font-bold mb-4 text-blue-900">Search Trains by Stations</h2>
+  
+  <div class="flex flex-col md:flex-row gap-4 mb-6 justify-center">
+    <input 
+      class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" 
+      id="fromStationNew" 
+      list="stationListNew" 
+      placeholder="Departure Station" 
+      type="text"
+    />
+    <input 
+      class="w-full md:w-1/4 px-4 py-3 rounded-lg border-2 border-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" 
+      id="toStationNew" 
+      list="stationListNew" 
+      placeholder="Arrival Station" 
+      type="text"
+    />
+    <datalist id="stationListNew"></datalist>
+    
+    <button 
+      class="w-full md:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg shadow-md transition-all duration-300" 
+      onclick="searchTrainsNew()">
+      <i class="fas fa-search mr-2"></i>Search New
     </button>
-</div>
+  </div>
+
+  <div id="train-results-new" class="space-y-4 max-w-4xl mx-auto"></div>
 </section>
 
 <!-- News Section -->
@@ -634,6 +650,12 @@ Have questions about Vande Bharat Express? Get in touch with us.
 </div>
 </div>
 </section>
+
+
+
+
+
+
 <div class="bg-white shadow-md rounded-lg p-8">
 <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
 <form class="space-y-6" id="contactForm">
@@ -770,41 +792,156 @@ observer.observe(card);
 });
 
 </script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-<script src="./mail.js"></script>
-<script>
-    function goToSearchResults() {
-      const from = document.getElementById("fromStation").value.trim();
-      const to = document.getElementById("toStation").value.trim();
 
-      if (from || to) {
-        localStorage.setItem("fromStation", from);
-        localStorage.setItem("toStation", to);
-        window.location.href = "search-results.html";
-      } else {
-        alert("Please enter at least one station.");
-      }
-    }
-  </script>
 <script>
-  // Populate station suggestions
-  fetch("trains_list_search.json")
+  let allStations = [];
+
+  // Load station list
+  fetch("train_station_list.json")
     .then(res => res.json())
     .then(data => {
+      // Collect unique station names + codes
       const stationSet = new Set();
-      data.forEach(train => {
-        stationSet.add(train["Departure Station"]);
-        stationSet.add(train["Arrival Station"]);
+      data.forEach(station => {
+        const name = station["Departure Station Name"];
+        const code = station["Departure Station Code"];
+        if (name && code) {
+          stationSet.add(`${name} (${code})`);
+        }
+      });
+      allStations = Array.from(stationSet);
+    });
+
+  // Attach input listener for both from/to station
+  function enableStationSuggestions(inputId) {
+    const input = document.getElementById(inputId);
+    input.addEventListener("input", function () {
+      const val = this.value.toLowerCase();
+      const dataList = document.getElementById("stationListNew");
+      dataList.innerHTML = "";
+
+      if (val.length > 1) { // start suggesting after 2 chars
+        const matches = allStations.filter(st =>
+          st.toLowerCase().includes(val)
+        ).slice(0, 15); // max 15 suggestions
+
+        matches.forEach(match => {
+          const option = document.createElement("option");
+          option.value = match;
+          dataList.appendChild(option);
+        });
+      }
+    });
+  }
+
+  // Activate for both inputs
+  enableStationSuggestions("fromStationNew");
+  enableStationSuggestions("toStationNew");
+</script>
+
+
+
+<script>
+function searchTrainsNew() {
+  const fromInput = document.getElementById("fromStationNew").value.trim();
+  const toInput = document.getElementById("toStationNew").value.trim();
+
+  // Extract station code from "Name (CODE)"
+  const extractCode = txt => {
+    if (!txt) return "";
+    const m = txt.match(/\(([^)]+)\)/);
+    return m ? m[1].trim().toUpperCase() : txt.trim().toUpperCase();
+  };
+  const fromCode = extractCode(fromInput);
+  const toCode = extractCode(toInput);
+
+  const resultsDiv = document.getElementById("train-results-new");
+  resultsDiv.innerHTML = "<p class='text-gray-700'>🔎 Searching...</p>";
+
+  fetch("train_station_list.json")
+    .then(res => res.json())
+    .then(data => {
+      const trains = {};
+      data.forEach(stop => {
+        const trainNo = (stop["Train Number"] || "").toString().trim();
+        if (!trainNo) return;
+        if (!trains[trainNo]) trains[trainNo] = [];
+        trains[trainNo].push(stop);
       });
 
-      const datalist = document.getElementById("stationList");
-      stationSet.forEach(station => {
-        const option = document.createElement("option");
-        option.value = station;
-        datalist.appendChild(option);
+      resultsDiv.innerHTML = "";
+      let anyFound = false;
+
+      Object.entries(trains).forEach(([trainNo, stops]) => {
+        // Sort strictly by Stop Number
+        stops.sort((a, b) => parseInt(a["Stop Number"]) - parseInt(b["Stop Number"]));
+
+        const fromIdx = stops.findIndex(s => s["Departure Station Code"] === fromCode);
+        const toIdx = stops.findIndex(s => s["Departure Station Code"] === toCode);
+
+        if (fromIdx !== -1 && toIdx !== -1 && fromIdx < toIdx) {
+          anyFound = true;
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "bg-white shadow-lg rounded-lg p-4 border border-gray-200 mb-6";
+
+          wrapper.innerHTML = `
+            <h3 class="text-lg font-bold text-blue-700 mb-4">🚆 Train ${trainNo}</h3>
+            <table class="w-full border-collapse border border-gray-300 text-sm">
+              <thead class="bg-blue-600 text-white">
+                <tr>
+                  <th class="border border-gray-300 px-3 py-2">Stop No</th>
+                  <th class="border border-gray-300 px-3 py-2 text-left">Station</th>
+                  <th class="border border-gray-300 px-3 py-2">Code</th>
+                  <th class="border border-gray-300 px-3 py-2">Arrival</th>
+                  <th class="border border-gray-300 px-3 py-2">Departure</th>
+                  <th class="border border-gray-300 px-3 py-2">Distance</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          `;
+
+          const tbody = wrapper.querySelector("tbody");
+
+          stops.forEach((s, idx) => {
+            const isFrom = idx === fromIdx;
+            const isTo = idx === toIdx;
+
+            const row = document.createElement("tr");
+            row.className = "hover:bg-gray-100";
+
+            row.innerHTML = `
+              <td class="border border-gray-300 px-3 py-2 text-center">${s["Stop Number"]}</td>
+              <td class="border border-gray-300 px-3 py-2 ${isFrom || isTo ? "text-red-600 font-bold" : ""}">
+                ${s["Departure Station Name"]}
+              </td>
+              <td class="border border-gray-300 px-3 py-2 text-center">${s["Departure Station Code"]}</td>
+              <td class="border border-gray-300 px-3 py-2 text-center">${s["Arrival Time"]}</td>
+              <td class="border border-gray-300 px-3 py-2 text-center">${s["Departure Time"]}</td>
+              <td class="border border-gray-300 px-3 py-2 text-center">${s["Journey Distance"]}</td>
+            `;
+            tbody.appendChild(row);
+          });
+
+          resultsDiv.appendChild(wrapper);
+        }
       });
+
+      if (!anyFound) {
+        resultsDiv.innerHTML = `<p class="text-red-600 font-semibold">❌ No direct trains found between "${fromInput}" and "${toInput}"</p>`;
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      resultsDiv.innerHTML = `<p class="text-red-600">Error loading data: ${err.message}</p>`;
     });
+}
 </script>
+
+
+
+
 
 <footer class="bg-gray-900 text-white py-6 mt-10">
   <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
@@ -816,6 +953,12 @@ observer.observe(card);
     </div>
   </div>
 </footer>
+
+
+
+
+
+
 
 </body>
 </html>

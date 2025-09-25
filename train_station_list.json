@@ -9451,7 +9451,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "0",
+    "Stop Number": "6",
     "Departure Station Code": "KTHU",
     "Departure Station Name": "Kathua",
     "Arrival Time": "20:48",
@@ -9466,7 +9466,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "1",
+    "Stop Number": "2",
     "Departure Station Code": "LDH",
     "Departure Station Name": "Ludhiana Jn",
     "Arrival Time": "18:24",
@@ -9481,7 +9481,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "2",
+    "Stop Number": "1",
     "Departure Station Code": "UMB",
     "Departure Station Name": "Ambala Cant Jn",
     "Arrival Time": "17:10",
@@ -9496,7 +9496,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "3",
+    "Stop Number": "0",
     "Departure Station Code": "NDLS",
     "Departure Station Name": "New Delhi",
     "Arrival Time": "starts",
@@ -9511,7 +9511,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "4",
+    "Stop Number": "5",
     "Departure Station Code": "SVDK",
     "Departure Station Name": "Shri Mata Vaishno Devi Katra",
     "Arrival Time": "23:20",
@@ -9526,7 +9526,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "5",
+    "Stop Number": "4",
     "Departure Station Code": "JAT",
     "Departure Station Name": "Jammu Tawi",
     "Arrival Time": "21:45",
@@ -9541,7 +9541,7 @@
   },
   {
     "Train Number": "22477",
-    "Stop Number": "6",
+    "Stop Number": "3",
     "Departure Station Code": "MCTM",
     "Departure Station Name": "Martyr Captain Tushar Mahajan",
     "Arrival Time": "22:43",
@@ -16409,5 +16409,5 @@
     "Avg Delay": "-",
     "State": ""
   }
-  
+
 ]
